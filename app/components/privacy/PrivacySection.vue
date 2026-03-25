@@ -11,5 +11,6 @@ defineProps<{
       {{ title }}
     </h2>
     <p class="text-surface-content/80 leading-relaxed">{{ content }}</p>
+    <slot name="footer" />
   </section>
 </template>

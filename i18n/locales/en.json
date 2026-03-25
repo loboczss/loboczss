@@ -7,7 +7,8 @@
     "init_call": "Contract",
     "language": "Language",
     "appearance": "Appearance",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "delete_account": "Delete Account"
   },
   "hero": {
     "title_span": "The Neural Architect // 2024",
@@ -82,6 +83,9 @@
     "sec5_content": "You have the right to access, rectify, object, and port your data. We guarantee full control over your digital identity within our ecosystem.",
     "sec6_title": "6. Third-Party Services and APIs",
     "sec6_content": "Our services may integrate third-party APIs (Maps, Firebase, Ads). We recommend reading the privacy policies of these specific providers for a complete understanding.",
+    "sec7_title": "7. Account Deletion",
+    "sec7_content": "We guarantee your right to be forgotten. You can request the permanent deletion of your account and all associated data at any time.",
+    "delete_link": "Request Account Deletion",
     "contact_info": "To exercise your rights or ask questions, contact our data protection officer: juan{'@'}loboczss.cloud"
   },
   "portfolio_page": {
@@ -92,8 +96,14 @@
     "title": "Our Services",
     "desc": "Tailored engineering solutions to drive your business forward."
   },
-  "contact_page": {
-    "title": "Contact Us",
-    "desc": "Start your project today. Our team is ready to architect your vision."
+  "delete_account": {
+    "title": "Delete My Account",
+    "desc": "We're sorry to see you go. Please confirm the details to request the permanent deletion of your data.",
+    "email_label": "Your Email Address",
+    "reason_label": "Reason for leaving (optional)",
+    "confirm_label": "I understand that this action is irreversible and all my data will be permanently deleted.",
+    "submit_btn": "Request Deletion",
+    "success_title": "Request Sent",
+    "success_msg": "We have received your request. Our team will process the deletion within 30 days. You will receive a confirmation at juan{'@'}loboczss.cloud"
   }
 }

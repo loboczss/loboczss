@@ -43,6 +43,18 @@
           :content="$t('privacy.sec6_content')" 
         />
 
+        <PrivacySection 
+          :title="$t('privacy.sec7_title')" 
+          :content="$t('privacy.sec7_content')" 
+        >
+          <template #footer>
+            <NuxtLink to="/delete-account" class="inline-flex items-center gap-2 mt-4 text-primary font-bold uppercase tracking-widest text-xs border-b border-primary/20 pb-1 hover:border-primary transition-all">
+              {{ $t('privacy.delete_link') }}
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+            </NuxtLink>
+          </template>
+        </PrivacySection>
+
         <!-- Footer Info -->
         <div class="mt-12 p-8 bg-surface-container/30 border border-surface-container/50 rounded-2xl">
           <p class="text-sm font-medium text-surface-content/80 leading-relaxed">

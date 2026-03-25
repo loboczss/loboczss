@@ -53,6 +53,7 @@ onUnmounted(() => {
         <NuxtLink to="/services" class="text-[10px] font-bold uppercase tracking-[0.2em] text-surface-content/60 hover:text-primary transition-all">{{ $t('header.capabilities') }}</NuxtLink>
         <NuxtLink to="/contact" class="text-[10px] font-bold uppercase tracking-[0.2em] text-surface-content/60 hover:text-primary transition-all">{{ $t('header.connect') }}</NuxtLink>
         <NuxtLink to="/privacy" class="text-[10px] font-bold uppercase tracking-[0.2em] text-surface-content/60 hover:text-primary transition-all">{{ $t('header.privacy') }}</NuxtLink>
+        <NuxtLink to="/delete-account" class="text-[10px] font-bold uppercase tracking-[0.2em] text-surface-content/60 hover:text-primary transition-all">{{ $t('header.delete_account') }}</NuxtLink>
       </nav>
       
       <!-- Desktop Actions -->
@@ -94,6 +95,7 @@ onUnmounted(() => {
               <NuxtLink to="/services" @click="toggleMenu" class="text-3xl font-bold uppercase tracking-tight text-surface-content hover:text-primary transition-all">{{ $t('header.capabilities') }}</NuxtLink>
               <NuxtLink to="/contact" @click="toggleMenu" class="text-3xl font-bold uppercase tracking-tight text-surface-content hover:text-primary transition-all">{{ $t('header.connect') }}</NuxtLink>
               <NuxtLink to="/privacy" @click="toggleMenu" class="text-3xl font-bold uppercase tracking-tight text-surface-content hover:text-primary transition-all">{{ $t('header.privacy') }}</NuxtLink>
+              <NuxtLink to="/delete-account" @click="toggleMenu" class="text-3xl font-bold uppercase tracking-tight text-surface-content hover:text-primary transition-all">{{ $t('header.delete_account') }}</NuxtLink>
             </nav>
 
             <div class="flex flex-col gap-8 border-t border-surface-container pt-12">

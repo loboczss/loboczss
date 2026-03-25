@@ -7,7 +7,8 @@
     "init_call": "Orçamento",
     "language": "Idioma",
     "appearance": "Aparência",
-    "privacy": "Privacidade"
+    "privacy": "Privacidade",
+    "delete_account": "Excluir Conta"
   },
   "hero": {
     "title_span": "The Neural Architect // 2024",
@@ -82,6 +83,9 @@
     "sec5_content": "Você possui direito de acesso, retificação, oposição e portabilidade de seus dados. Garantimos total controle sobre sua identidade digital em nosso ecossistema.",
     "sec6_title": "6. Serviços de Terceiros e APIs",
     "sec6_content": "Nossos serviços podem integrar APIs de terceiros (Maps, Firebase, Ads). Recomendamos a leitura das políticas de privacidade destes provedores específicos para uma compreensão completa.",
+    "sec7_title": "7. Exclusão de Conta",
+    "sec7_content": "Garantimos o seu direito de esquecimento. Você pode solicitar a exclusão definitiva de sua conta e todos os dados associados a qualquer momento.",
+    "delete_link": "Solicitar Exclusão de Conta",
     "contact_info": "Para exercer seus direitos ou tirar dúvidas, contate nossa encarregada de proteção de dados: juan{'@'}loboczss.cloud"
   },
   "portfolio_page": {
@@ -92,8 +96,14 @@
     "title": "Nossos Serviços",
     "desc": "Soluções de engenharia sob medida para impulsionar a sua visão."
   },
-  "contact_page": {
-    "title": "Fale Conosco",
-    "desc": "Inicie seu projeto hoje. Nossa equipe está pronta para te atender."
+  "delete_account": {
+    "title": "Excluir Minha Conta",
+    "desc": "Lamentamos ver você partir. Por favor, confirme os detalhes para solicitarmos a exclusão definitiva dos seus dados.",
+    "email_label": "Seu E-mail",
+    "reason_label": "Motivo da saída (opcional)",
+    "confirm_label": "Eu entendo que esta ação é irreversível e todos os meus dados serão apagados permanentemente.",
+    "submit_btn": "Solicitar Exclusão",
+    "success_title": "Solicitação Enviada",
+    "success_msg": "Recebemos seu pedido. Nossa equipe processará a exclusão em até 30 dias conforme a LGPD. Você receberá uma confirmação em juan{'@'}loboczss.cloud"
   }
 }
