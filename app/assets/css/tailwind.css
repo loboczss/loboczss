@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --surface-lowest: #f1f5f9;
+    --surface-low: #e2e8f0;
+    --surface: #cbd5e1;
+    --surface-container: #94a3b8;
+    --surface-high: #64748b;
+    --surface-highest: #475569;
+    --surface-content: #0f172a;
+  }
+
+  .dark {
+    --surface-lowest: #060d20;
+    --surface-low: #131b2e;
+    --surface: #0b1326;
+    --surface-container: #171f33;
+    --surface-high: #222a3e;
+    --surface-highest: #2d3449;
+    --surface-content: #dbe2fd;
+  }
+}

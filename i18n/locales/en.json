@@ -1,0 +1,99 @@
+{
+  "header": {
+    "artifacts": "Projects",
+    "capabilities": "Services",
+    "portfolio": "Portfolio",
+    "connect": "Contact",
+    "init_call": "Contract",
+    "language": "Language",
+    "appearance": "Appearance",
+    "privacy": "Privacy"
+  },
+  "hero": {
+    "title_span": "The Neural Architect // 2024",
+    "main_title": "Loboczss",
+    "subtitle": "Crafting digital excellence through high-end engineering. Specialized in Apps, Sites & AI Automation.",
+    "start_project": "Start Your Project",
+    "scroll": "Scroll to explore"
+  },
+  "services": {
+    "span": "Capabilities",
+    "title": "Visionary Engineering.",
+    "desc": "We don't just build features. We architect systems where technical precision meets visionary artistry.",
+    "apps_title": "Mobile Apps",
+    "apps_desc": "High-performance cross-platform applications built with React Native and Flutter. Seamless UX focused on conversion.",
+    "web_title": "Modern Web",
+    "web_desc": "Scalable web architectures using Nuxt 4, Vue 3 & Tailwind. We prioritize performance, SEO, and radical aesthetics.",
+    "ai_title": "AI Automation",
+    "ai_desc": "Intelligent workflows powered by LLMs and custom RAG pipelines. Automating the complex to free the creative. We transform raw data into predictive intelligence."
+  },
+  "portfolio": {
+    "title1": "Selected",
+    "title2": "Artifacts",
+    "view_full": "View Full Portfolio //",
+    "project1": "AI-driven cybersecurity infrastructure protecting over $500M in digital assets for fintech partners.",
+    "project2": "Next-gen asset management for high-net-worth individuals. Minimalist precision Meets maximum security."
+  },
+  "kpis": {
+    "span": "The Benchmark",
+    "val1": "50+",
+    "lbl1": "Active Projects",
+    "val2": "100%",
+    "lbl2": "Satisfaction",
+    "val3": "10x",
+    "lbl3": "Efficiency Gain",
+    "val4": "24/7",
+    "lbl4": "AI Monitoring"
+  },
+  "contact": {
+    "title": "Ready to architect your vision?",
+    "direct_line": "Direct Line",
+    "email": "Electronic Mail",
+    "form_span": "The Mission",
+    "name_label": "Identity",
+    "name_ph": "Juan Reis",
+    "email_label": "Endpoint (E-mail)",
+    "msg_placeholder": "Tell me about your project...",
+    "submit": "Transmit Inquiry"
+  },
+  "footer": {
+    "desc": "Engineering premium digital experiences.",
+    "artifacts": "Artifacts",
+    "social": "Neural Architect",
+    "rights": "© 2024 LOBOCZSS. ALL RIGHTS RESERVED.",
+    "status": "SYSTEM STATUS: OPTIMAL",
+    "cloud": "CLOUD BASED // SERVING WORLDWIDE",
+    "privacy": "Privacy"
+  },
+  "privacy": {
+    "title": "Privacy Policy and Data Protection",
+    "last_update": "Last update: March 25, 2026",
+    "back_home": "Back to Home",
+    "intro": "At Loboczss, transparency is our foundation. This Privacy Policy details how we handle your personal data, in compliance with GDPR, LGPD, and global app store guidelines (Google Play Store and Apple App Store).",
+    "sec1_title": "1. Information Collection",
+    "sec1_content": "We collect information you provide directly (name, email, phone) and automatic technical data (IP address, device type, advertising identifiers). This data is essential for the safe and efficient operation of our applications.",
+    "sec2_title": "2. Purpose and Usage",
+    "sec2_content": "Your data is used for: (a) Provision of services and technical support; (b) Marketing communications (only with your consent); (c) System security and fraud prevention; (d) Compliance with legal obligations.",
+    "sec3_title": "3. Third-Party Sharing",
+    "sec3_content": "We do not sell your data. We may share information with trusted partners (e.g., cloud providers, analysis tools like Google Analytics) only to enable app functionality, under strict confidentiality agreements.",
+    "sec4_title": "4. Retention and Deletion",
+    "sec4_content": "We keep your data only as long as necessary. You have the right to request full deletion of your information at any time through our support channels.",
+    "sec5_title": "5. User Rights",
+    "sec5_content": "You have the right to access, rectify, object, and port your data. We guarantee full control over your digital identity within our ecosystem.",
+    "sec6_title": "6. Third-Party Services and APIs",
+    "sec6_content": "Our services may integrate third-party APIs (Maps, Firebase, Ads). We recommend reading the privacy policies of these specific providers for a complete understanding.",
+    "contact_info": "To exercise your rights or ask questions, contact our data protection officer: juan{'@'}loboczss.cloud"
+  },
+  "portfolio_page": {
+    "title": "Our Projects",
+    "desc": "Discover our work and the digital experiences we've built."
+  },
+  "services_page": {
+    "title": "Our Services",
+    "desc": "Tailored engineering solutions to drive your business forward."
+  },
+  "contact_page": {
+    "title": "Contact Us",
+    "desc": "Start your project today. Our team is ready to architect your vision."
+  }
+}

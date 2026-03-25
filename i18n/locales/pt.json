@@ -1,0 +1,99 @@
+{
+  "header": {
+    "artifacts": "Projetos",
+    "capabilities": "Serviços",
+    "portfolio": "Portfólio",
+    "connect": "Contato",
+    "init_call": "Orçamento",
+    "language": "Idioma",
+    "appearance": "Aparência",
+    "privacy": "Privacidade"
+  },
+  "hero": {
+    "title_span": "The Neural Architect // 2024",
+    "main_title": "Loboczss",
+    "subtitle": "Criando excelência digital através de engenharia de ponta. Especializado em Apps, Sites e Automação com I.A.",
+    "start_project": "Iniciar Projeto",
+    "scroll": "Role para explorar"
+  },
+  "services": {
+    "span": "Capacidades",
+    "title": "Engenharia Visionária.",
+    "desc": "Nós não apenas construímos funcionalidades. Criamos sistemas onde a precisão técnica encontra o design de excelência.",
+    "apps_title": "Aplicativos Mobile",
+    "apps_desc": "Aplicativos cross-platform de alta performance feitos com React Native e Flutter. UX fluida focada em conversão.",
+    "web_title": "Web Moderna",
+    "web_desc": "Arquiteturas web escaláveis usando Nuxt 4, Vue 3 & Tailwind. Focamos em performance, SEO e estética disruptiva.",
+    "ai_title": "Automação com I.A.",
+    "ai_desc": "Fluxos de trabalho inteligentes movidos por LLMs e pipelines integrados. Automatizando o complexo para libertar o criativo. Transformamos dados em inteligência previsível."
+  },
+  "portfolio": {
+    "title1": "Projetos",
+    "title2": "Selecionados",
+    "view_full": "Ver portfólio completo //",
+    "project1": "Infraestrutura de cibersegurança movida por IA protegendo mais de US$ 500 milhões em ativos digitais.",
+    "project2": "Sistema de gerenciamento de próxima geração para lideranças. Precisão minimalista e segurança máxima."
+  },
+  "kpis": {
+    "span": "A Referência",
+    "val1": "50+",
+    "lbl1": "Projetos Ativos",
+    "val2": "100%",
+    "lbl2": "Satisfação",
+    "val3": "10x",
+    "lbl3": "Ganho de Eficiência",
+    "val4": "24/7",
+    "lbl4": "Monitoramento I.A."
+  },
+  "contact": {
+    "title": "Pronto para arquitetar sua visão?",
+    "direct_line": "Linha Direta",
+    "email": "Correio Eletrônico",
+    "form_span": "A Missão",
+    "name_label": "Identificação",
+    "name_ph": "Juan Reis",
+    "email_label": "Endpoint (E-mail)",
+    "msg_placeholder": "Me conte sobre o seu projeto...",
+    "submit": "Transmitir Proposta"
+  },
+  "footer": {
+    "desc": "Criando experiências digitais premium.",
+    "artifacts": "Projetos",
+    "social": "Neural Architect",
+    "rights": "© 2024 LOBOCZSS. TODOS OS DIREITOS RESERVADOS.",
+    "status": "STATUS DO SISTEMA: IDEAL",
+    "cloud": "BASEADO NA NUVEM // ATENDENDO O MUNDO TODO",
+    "privacy": "Privacidade"
+  },
+  "privacy": {
+    "title": "Política de Privacidade e Proteção de Dados",
+    "last_update": "Última atualização: 25 de Março de 2026",
+    "back_home": "Voltar para Início",
+    "intro": "Na Loboczss, a transparência é o nosso alicerce. Esta Política de Privacidade detalha como tratamos seus dados pessoais, em conformidade com a LGPD (Lei Geral de Proteção de Dados) e as diretrizes globais de lojas de aplicativos (Google Play Store e Apple App Store).",
+    "sec1_title": "1. Coleta de Informações",
+    "sec1_content": "Coletamos informações que você nos fornece diretamente (nome, e-mail, telefone) e dados técnicos automáticos (endereço IP, tipo de dispositivo, identificadores de publicidade). Estes dados são essenciais para a operação segura e eficiente de nossas aplicações.",
+    "sec2_title": "2. Uso e Finalidade",
+    "sec2_content": "Seus dados são utilizados para: (a) Prestação de serviços e suporte técnico; (b) Comunicações de marketing (apenas com seu consentimento); (c) Segurança do sistema e prevenção de fraudes; (d) Cumprimento de obrigações legais.",
+    "sec3_title": "3. Compartilhamento com Terceiros",
+    "sec3_content": "Não vendemos seus dados. Podemos compartilhar informações com parceiros de confiança (ex: provedores de nuvem, ferramentas de análise como Google Analytics) apenas para viabilizar a funcionalidade do app, sob rígidos contratos de confidencialidade.",
+    "sec4_title": "4. Retenção e Exclusão",
+    "sec4_content": "Mantemos seus dados apenas pelo tempo necessário. Você tem o direito de solicitar a exclusão total de suas informações a qualquer momento através de nossos canais de suporte.",
+    "sec5_title": "5. Direitos do Usuário",
+    "sec5_content": "Você possui direito de acesso, retificação, oposição e portabilidade de seus dados. Garantimos total controle sobre sua identidade digital em nosso ecossistema.",
+    "sec6_title": "6. Serviços de Terceiros e APIs",
+    "sec6_content": "Nossos serviços podem integrar APIs de terceiros (Maps, Firebase, Ads). Recomendamos a leitura das políticas de privacidade destes provedores específicos para uma compreensão completa.",
+    "contact_info": "Para exercer seus direitos ou tirar dúvidas, contate nossa encarregada de proteção de dados: juan{'@'}loboczss.cloud"
+  },
+  "portfolio_page": {
+    "title": "Nossos Projetos",
+    "desc": "Conheça nosso trabalho e as experiências digitais que construímos."
+  },
+  "services_page": {
+    "title": "Nossos Serviços",
+    "desc": "Soluções de engenharia sob medida para impulsionar a sua visão."
+  },
+  "contact_page": {
+    "title": "Fale Conosco",
+    "desc": "Inicie seu projeto hoje. Nossa equipe está pronta para te atender."
+  }
+}
