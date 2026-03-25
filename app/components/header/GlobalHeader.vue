@@ -40,7 +40,10 @@ onUnmounted(() => {
       
       <!-- Logo -->
       <NuxtLink to="/" class="flex items-center gap-2 md:gap-3 group no-underline z-[110]">
-        <div class="w-8 h-8 md:w-10 md:h-10 border border-primary text-primary flex items-center justify-center font-bold font-mono text-xs md:text-sm">L</div>
+        <div class="relative w-8 h-8 md:w-10 md:h-10">
+          <img src="/favicon-dark.svg" class="w-full h-full object-contain hidden dark:block" alt="Loboczss Logo" />
+          <img src="/favicon-light.svg" class="w-full h-full object-contain block dark:hidden" alt="Loboczss Logo" />
+        </div>
         <p class="font-bold text-lg md:text-xl tracking-tighter text-surface-content uppercase">Loboczss<span class="text-primary">.</span></p>
       </NuxtLink>
       
