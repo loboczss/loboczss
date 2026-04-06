@@ -1,33 +1,59 @@
 <script setup lang="ts">
-import { useI18n } from '#imports';
+import { navigateTo, useI18n } from '#imports';
 import PremiumButton from '~/components/ui/PremiumButton.vue';
+import { indexImages } from '~/config/images';
 
 const { t } = useI18n();
 </script>
 
 <template>
-  <section class="relative min-h-[85vh] md:min-h-[90vh] pb-24 pt-40 md:pt-48 px-6 md:px-12 lg:px-24 flex flex-col justify-center items-start gap-12 lg:gap-16 z-10 bg-surface">
-    <div class="flex flex-col gap-6 md:gap-8 w-full max-w-7xl mx-auto">
-      <span class="text-[10px] md:text-sm font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] text-surface-content/50">{{ t('hero.title_span') }}</span>
-      <h1 class="text-[4rem] leading-[1] sm:text-7xl md:text-[8rem] lg:text-[10rem] font-semibold tracking-tighter text-surface-content">
+  <section class="relative min-h-screen flex flex-col justify-end pb-16 md:pb-24 pt-32 md:pt-40 px-6 md:px-12 lg:px-24 bg-surface overflow-hidden z-10">
+
+    <!-- Hero background image for glassmorphism -->
+    <div class="absolute inset-0" aria-hidden="true">
+      <img
+        :src="indexImages.heroBackground"
+        alt=""
+        class="w-full h-full object-cover scale-105 brightness-[0.5] saturate-[0.85]"
+      />
+      <div class="absolute inset-0 bg-black/45"></div>
+      <div class="absolute inset-0 backdrop-blur-[2px]"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/75"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_45%,rgba(255,255,255,0.15),transparent_48%)]"></div>
+    </div>
+
+    <!-- Background dot grid -->
+    <div class="absolute inset-0 pointer-events-none select-none opacity-[0.08]" aria-hidden="true"
+      style="background-image: radial-gradient(white 1px, transparent 1px); background-size: 40px 40px;">
+    </div>
+
+    <!-- Top accent line -->
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent"></div>
+
+    <!-- Main content -->
+    <div class="max-w-7xl mx-auto w-full flex flex-col gap-10 md:gap-16 z-10">
+
+      <!-- Giant heading -->
+      <h1 class="text-[clamp(4.5rem,13vw,13rem)] font-semibold leading-[0.88] tracking-tighter text-white drop-shadow-[0_8px_28px_rgba(0,0,0,0.65)]">
         {{ t('hero.main_title') }}<span class="text-primary">.</span>
       </h1>
-    </div>
-    
-    <div class="flex flex-col md:flex-row gap-8 md:gap-16 lg:gap-24 items-start w-full max-w-7xl mx-auto">
-      <h2 class="text-xl sm:text-2xl md:text-3xl font-light leading-relaxed max-w-2xl text-surface-content/70">
-        {{ t('hero.subtitle') }}
-      </h2>
-      
-      <div class="flex flex-col gap-6 pt-2 md:pt-4 w-full md:w-auto">
-        <PremiumButton variant="primary" class="w-full md:w-auto text-center justify-center py-5 md:py-6 rounded-full">
-          {{ t('hero.start_project') }}
-        </PremiumButton>
-        <div class="hidden md:flex items-center gap-4 text-xs font-bold tracking-widest uppercase opacity-40 justify-center md:justify-start">
-          {{ t('hero.scroll') }}
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-          </svg>
+
+      <!-- Bottom row -->
+      <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 p-5 md:p-7 rounded-2xl border border-white/30 bg-black/35 backdrop-blur-xl shadow-[0_14px_45px_rgba(0,0,0,0.45)]">
+        <p class="text-lg sm:text-xl md:text-2xl font-light text-white/90 max-w-xl leading-relaxed">
+          {{ t('hero.subtitle') }}
+        </p>
+
+        <div class="flex flex-col gap-4 items-start md:items-end shrink-0">
+          <PremiumButton variant="primary" @click="navigateTo('/budget')">
+            {{ t('hero.start_project') }}
+          </PremiumButton>
+          <span class="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.25em] text-white/75">
+            {{ t('hero.scroll') }}
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+            </svg>
+          </span>
         </div>
       </div>
     </div>

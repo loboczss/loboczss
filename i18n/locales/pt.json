@@ -11,7 +11,7 @@
     "delete_account": "Excluir Conta"
   },
   "hero": {
-    "title_span": "The Neural Architect // 2024",
+    "title_span": "",
     "main_title": "Loboczss",
     "subtitle": "Criando excelência digital através de engenharia de ponta. Especializado em Apps, Sites e Automação com I.A.",
     "start_project": "Iniciar Projeto",
@@ -51,9 +51,10 @@
     "direct_line": "Linha Direta",
     "email": "Correio Eletrônico",
     "form_span": "A Missão",
-    "name_label": "Identificação",
-    "name_ph": "Juan Reis",
+    "name_label": "Nome",
+    "name_ph": "seu nome",
     "email_label": "Endpoint (E-mail)",
+    "email_ph": "seu{'@'}email.com",
     "msg_placeholder": "Me conte sobre o seu projeto...",
     "submit": "Transmitir Proposta"
   },
@@ -105,5 +106,16 @@
     "submit_btn": "Solicitar Exclusão",
     "success_title": "Solicitação Enviada",
     "success_msg": "Recebemos seu pedido. Nossa equipe processará a exclusão em até 30 dias conforme a LGPD. Você receberá uma confirmação em juan{'@'}loboczss.cloud"
+  },
+  "budget_page": {
+    "span": "Orcamento",
+    "title": "Vamos desenhar o seu projeto com escopo, prazo e investimento claros.",
+    "desc": "Descreva seu objetivo e sua necessidade tecnica. Em seguida enviamos uma proposta personalizada com estimativa de tempo e custo.",
+    "step1_title": "Briefing Inicial",
+    "step1_desc": "Entendemos contexto, metas, publico e requisitos essenciais do produto.",
+    "step2_title": "Arquitetura e Escopo",
+    "step2_desc": "Definimos stack, entregas por fase, riscos tecnicos e cronograma realista.",
+    "step3_title": "Proposta Final",
+    "step3_desc": "Voce recebe um plano objetivo com investimento, prazos e proximos passos."
   }
 }

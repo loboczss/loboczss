@@ -33,7 +33,7 @@ onUnmounted(() => {
   <header 
     class="fixed top-0 z-[100] w-full transition-all duration-300 border-b"
     :class="[
-      isScrolled ? 'bg-surface/90 backdrop-blur-xl py-3 border-surface-container/50' : 'bg-transparent py-6 border-transparent'
+      isScrolled ? 'bg-surface/90 backdrop-blur-xl py-3 border-surface-container/50' : 'bg-black/35 backdrop-blur-md py-4 border-white/15'
     ]"
   >
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12">
@@ -44,27 +44,24 @@ onUnmounted(() => {
           <img src="/favicon-dark.svg" class="w-full h-full object-contain hidden dark:block" alt="Loboczss Logo" />
           <img src="/favicon-light.svg" class="w-full h-full object-contain block dark:hidden" alt="Loboczss Logo" />
         </div>
-        <p class="font-bold text-lg md:text-xl tracking-tighter text-surface-content uppercase">Loboczss<span class="text-primary">.</span></p>
+        <p class="font-bold text-lg md:text-xl tracking-tighter uppercase" :class="isScrolled ? 'text-surface-content' : 'text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]'">Loboczss<span class="text-primary">.</span></p>
       </NuxtLink>
       
       <!-- Desktop Nav -->
       <nav class="hidden lg:flex items-center gap-8 xl:gap-12 ml-auto pr-12 xl:pr-16">
-        <NuxtLink to="/portfolio" class="text-[10px] font-bold uppercase tracking-[0.2em] text-surface-content/60 hover:text-primary transition-all">{{ $t('header.artifacts') }}</NuxtLink>
-        <NuxtLink to="/services" class="text-[10px] font-bold uppercase tracking-[0.2em] text-surface-content/60 hover:text-primary transition-all">{{ $t('header.capabilities') }}</NuxtLink>
-        <NuxtLink to="/contact" class="text-[10px] font-bold uppercase tracking-[0.2em] text-surface-content/60 hover:text-primary transition-all">{{ $t('header.connect') }}</NuxtLink>
-        <NuxtLink to="/privacy" class="text-[10px] font-bold uppercase tracking-[0.2em] text-surface-content/60 hover:text-primary transition-all">{{ $t('header.privacy') }}</NuxtLink>
-        <NuxtLink to="/delete-account" class="text-[10px] font-bold uppercase tracking-[0.2em] text-surface-content/60 hover:text-primary transition-all">{{ $t('header.delete_account') }}</NuxtLink>
+        <NuxtLink to="/portfolio" class="text-[10px] font-bold uppercase tracking-[0.2em] transition-all" :class="isScrolled ? 'text-surface-content/60 hover:text-primary' : 'text-white/85 hover:text-white'">{{ $t('header.artifacts') }}</NuxtLink>
+        <NuxtLink to="/services" class="text-[10px] font-bold uppercase tracking-[0.2em] transition-all" :class="isScrolled ? 'text-surface-content/60 hover:text-primary' : 'text-white/85 hover:text-white'">{{ $t('header.capabilities') }}</NuxtLink>
+        <NuxtLink to="/contact" class="text-[10px] font-bold uppercase tracking-[0.2em] transition-all" :class="isScrolled ? 'text-surface-content/60 hover:text-primary' : 'text-white/85 hover:text-white'">{{ $t('header.connect') }}</NuxtLink>
+        <NuxtLink to="/privacy" class="text-[10px] font-bold uppercase tracking-[0.2em] transition-all" :class="isScrolled ? 'text-surface-content/60 hover:text-primary' : 'text-white/85 hover:text-white'">{{ $t('header.privacy') }}</NuxtLink>
       </nav>
       
       <!-- Desktop Actions -->
       <div class="hidden lg:flex items-center gap-6 xl:gap-8">
         <LanguageSelector />
-        <DarkModeToggle class="opacity-60 hover:opacity-100 transition-opacity" />
-        <a href="mailto:juan@loboczss.cloud">
-           <button class="bg-primary text-white px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.15em] border border-primary/20 hover:bg-primary/90 transition-all">
-             {{ $t('header.init_call') }}
-           </button>
-        </a>
+        <DarkModeToggle class="transition-opacity" :class="isScrolled ? 'opacity-60 hover:opacity-100' : 'opacity-90 text-white hover:opacity-100'" />
+        <NuxtLink to="/budget" class="bg-primary text-white px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.15em] border border-primary/20 hover:bg-primary/90 transition-all no-underline">
+          {{ $t('header.init_call') }}
+        </NuxtLink>
       </div>
 
       <!-- Mobile Controls (Theme/Lang next to Hamburger) -->
@@ -95,7 +92,6 @@ onUnmounted(() => {
               <NuxtLink to="/services" @click="toggleMenu" class="text-3xl font-bold uppercase tracking-tight text-surface-content hover:text-primary transition-all">{{ $t('header.capabilities') }}</NuxtLink>
               <NuxtLink to="/contact" @click="toggleMenu" class="text-3xl font-bold uppercase tracking-tight text-surface-content hover:text-primary transition-all">{{ $t('header.connect') }}</NuxtLink>
               <NuxtLink to="/privacy" @click="toggleMenu" class="text-3xl font-bold uppercase tracking-tight text-surface-content hover:text-primary transition-all">{{ $t('header.privacy') }}</NuxtLink>
-              <NuxtLink to="/delete-account" @click="toggleMenu" class="text-3xl font-bold uppercase tracking-tight text-surface-content hover:text-primary transition-all">{{ $t('header.delete_account') }}</NuxtLink>
             </nav>
 
             <div class="flex flex-col gap-8 border-t border-surface-container pt-12">
@@ -108,11 +104,9 @@ onUnmounted(() => {
                   <DarkModeToggle />
                </div>
                
-               <a href="mailto:juan@loboczss.cloud" class="w-full mt-4" @click="toggleMenu">
-                  <button class="w-full bg-primary text-white py-5 rounded-full text-xs font-bold uppercase tracking-[0.2em] shadow-xl shadow-primary/20">
-                    {{ $t('header.init_call') }}
-                  </button>
-               </a>
+               <NuxtLink to="/budget" class="w-full mt-4 bg-primary text-white py-5 rounded-full text-xs font-bold uppercase tracking-[0.2em] shadow-xl shadow-primary/20 text-center no-underline" @click="toggleMenu">
+                 {{ $t('header.init_call') }}
+               </NuxtLink>
             </div>
             
             <div class="mt-auto pt-12 pb-6">

@@ -3,6 +3,13 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    resendApiKey: process.env.RESEND_API_KEY,
+    resendFromEmail: process.env.RESEND_FROM_EMAIL || 'contato@loboczss.cloud',
+    resendToEmail: process.env.RESEND_TO_EMAIL || 'juan@loboczss.cloud',
+    resendOwnerEmail: process.env.RESEND_OWNER_EMAIL || 'juanmproducoes@gmail.com',
+  },
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',

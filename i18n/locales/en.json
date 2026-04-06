@@ -11,7 +11,7 @@
     "delete_account": "Delete Account"
   },
   "hero": {
-    "title_span": "The Neural Architect // 2024",
+    "title_span": "",
     "main_title": "Loboczss",
     "subtitle": "Crafting digital excellence through high-end engineering. Specialized in Apps, Sites & AI Automation.",
     "start_project": "Start Your Project",
@@ -51,9 +51,10 @@
     "direct_line": "Direct Line",
     "email": "Electronic Mail",
     "form_span": "The Mission",
-    "name_label": "Identity",
-    "name_ph": "Juan Reis",
+    "name_label": "Name",
+    "name_ph": "your name",
     "email_label": "Endpoint (E-mail)",
+    "email_ph": "your{'@'}email.com",
     "msg_placeholder": "Tell me about your project...",
     "submit": "Transmit Inquiry"
   },
@@ -105,5 +106,16 @@
     "submit_btn": "Request Deletion",
     "success_title": "Request Sent",
     "success_msg": "We have received your request. Our team will process the deletion within 30 days. You will receive a confirmation at juan{'@'}loboczss.cloud"
+  },
+  "budget_page": {
+    "span": "Budget",
+    "title": "Let's shape your project with clear scope, timeline, and investment.",
+    "desc": "Tell us your goal and technical needs. We then send a custom proposal with time and cost estimates.",
+    "step1_title": "Initial Brief",
+    "step1_desc": "We map your context, goals, audience, and essential product requirements.",
+    "step2_title": "Architecture and Scope",
+    "step2_desc": "We define stack, phased deliverables, technical risks, and a realistic timeline.",
+    "step3_title": "Final Proposal",
+    "step3_desc": "You receive a clear plan with investment, deadlines, and next steps."
   }
 }
