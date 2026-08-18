@@ -15,6 +15,14 @@ export default <Partial<Config>>{
           DEFAULT: '#FF6A88',
           deep: '#D8456B',
         },
+        // Source highlighting. Two lavender tiers, deliberately NOT
+        // incandescent: numeric literals are the most frequent token in the
+        // shader, and spending the reserved colour on them would dilute the
+        // one thing it marks.
+        syntax: {
+          key: '#C9BFFF',
+          num: '#B9B0E6',
+        },
       },
       fontFamily: {
         // One variable grotesk, worked across its width axis.
@@ -32,6 +40,14 @@ export default <Partial<Config>>{
         caps: ['0.625rem', { lineHeight: '1.2', letterSpacing: '0.3em' }],
         meta: ['0.6875rem', { lineHeight: '1.3', letterSpacing: '0.3em' }],
         label: ['0.75rem', { lineHeight: '1.3', letterSpacing: '0.3em' }],
+        // Denser reading step (15px), distinct from the 16px body: legal
+        // copy, field text and strip values. Five components had each been
+        // spelling it out as a literal.
+        read: ['0.9375rem', { lineHeight: '1.7' }],
+        // Source-panel steps. Mono is admitted here only because this is
+        // literal code and measurement, never as a costume for "technical".
+        code: ['0.75rem', { lineHeight: '1.75' }],
+        'code-val': ['0.8125rem', { lineHeight: '1.4' }],
         // Display steps. Declared here so the ramp is a system rather than
         // five improvised clamps in five scoped stylesheets.
         title: ['clamp(1.5rem, 3vw, 2.25rem)', { lineHeight: '1.1', letterSpacing: '-0.01em' }],

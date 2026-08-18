@@ -67,7 +67,7 @@ withDefaults(defineProps<{ compact?: boolean }>(), { compact: false })
 }
 
 .cstrip__val {
-  font-size: 0.9375rem;
+  font-size: theme('fontSize.read[0]');
   font-weight: 300;
 }
 

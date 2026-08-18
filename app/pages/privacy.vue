@@ -46,7 +46,7 @@ useSeoMeta({
         </PrivacySection>
 
         <div class="mt-12 border border-[var(--frame)] p-8">
-          <p class="text-[0.9375rem] leading-relaxed text-mist/80">{{ $t('privacy.contact_info') }}</p>
+          <p class="text-read text-mist/80">{{ $t('privacy.contact_info') }}</p>
         </div>
       </div>
     </div>

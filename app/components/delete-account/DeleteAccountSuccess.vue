@@ -14,7 +14,7 @@ import PortalButton from '~/components/portal/PortalButton.vue'
       {{ $t('delete_account.success_title') }}
     </h2>
 
-    <p class="max-w-[62ch] text-[0.9375rem] leading-relaxed text-mist">
+    <p class="max-w-[62ch] text-read text-mist">
       {{ $t('delete_account.success_msg') }}
     </p>
 

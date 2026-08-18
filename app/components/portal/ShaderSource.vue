@@ -149,7 +149,7 @@ const paint = (line: string) => {
   max-height: 24rem;
   overflow: auto;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.75rem;
+  font-size: theme('fontSize.code[0]');
   line-height: 1.75;
   color: var(--mist);
 }
@@ -170,7 +170,7 @@ const paint = (line: string) => {
 }
 
 .ssrc__code :deep(.c-key) {
-  color: #c9bfff;
+  color: theme('colors.syntax.key');
   font-style: normal;
 }
 
@@ -178,7 +178,7 @@ const paint = (line: string) => {
   /* Not incandescent: numeric literals are the most frequent token in this
      shader, and spending the action-reserved colour on all of them would
      dilute the one thing it marks. */
-  color: #b9b0e6;
+  color: theme('colors.syntax.num');
   font-style: normal;
 }
 
@@ -215,12 +215,12 @@ const paint = (line: string) => {
 
 .ssrc__val {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.8125rem;
+  font-size: theme('fontSize.code-val[0]');
   color: #fff;
 }
 
 .ssrc__val--small {
-  font-size: 0.6875rem;
+  font-size: theme('fontSize.meta[0]');
   line-height: 1.4;
   color: var(--mist);
   word-break: break-word;

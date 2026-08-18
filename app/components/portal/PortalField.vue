@@ -103,7 +103,7 @@ const onInput = (e: Event) => emit('update:modelValue', (e.target as HTMLInputEl
   background: rgb(11 6 32 / 0.55);
   border: 1px solid var(--frame-control);
   color: var(--mist);
-  font-size: 0.9375rem;
+  font-size: theme('fontSize.read[0]');
   line-height: 1.6;
   outline: none;
   resize: vertical;

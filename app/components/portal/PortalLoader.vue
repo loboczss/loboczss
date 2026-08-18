@@ -127,7 +127,7 @@ onBeforeUnmount(() => {
 }
 
 .ploader__num {
-  font-size: 0.6875rem;
+  font-size: theme('fontSize.meta[0]');
   font-weight: 400;
   color: var(--mist);
 }

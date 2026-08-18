@@ -18,7 +18,7 @@ defineProps<{
       <h2 class="text-sm uppercase tracking-wide text-mist">{{ title }}</h2>
     </div>
 
-    <p class="max-w-[68ch] text-[0.9375rem] leading-[1.75] text-mist">{{ content }}</p>
+    <p class="max-w-[68ch] text-read text-mist">{{ content }}</p>
 
     <slot name="footer" />
   </section>

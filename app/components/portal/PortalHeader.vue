@@ -265,9 +265,13 @@ onUnmounted(() => {
   transition: color 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Rest is already Mist after the contrast pass, so hovering to Mist was a
+   no-op affordance. Nav is navigation, not the primary action, so it steps up
+   to white rather than spending the reserved Incandescent. */
 .plink:hover,
+.plink:focus-visible,
 .plink.router-link-active {
-  color: var(--mist);
+  color: #fff;
 }
 
 .plocale {
