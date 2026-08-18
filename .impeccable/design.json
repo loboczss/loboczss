@@ -8,93 +8,285 @@
         "role": "neutral",
         "displayName": "Void",
         "canonical": "#0B0620",
-        "tonalRamp": ["#050310", "#0B0620", "#150C3A", "#221355", "#34206F", "#4C3A8E", "#7A6BB2", "#B7AED6"]
+        "tonalRamp": [
+          "#050310",
+          "#0B0620",
+          "#150C3A",
+          "#221355",
+          "#34206F",
+          "#4C3A8E",
+          "#7A6BB2",
+          "#B7AED6"
+        ]
       },
       "abyss": {
         "role": "neutral",
         "displayName": "Abyss",
         "canonical": "#140C33",
-        "tonalRamp": ["#06040F", "#0C0720", "#140C33", "#1F1450", "#2E1F70", "#453394", "#7160BC", "#ADA2D9"]
+        "tonalRamp": [
+          "#06040F",
+          "#0C0720",
+          "#140C33",
+          "#1F1450",
+          "#2E1F70",
+          "#453394",
+          "#7160BC",
+          "#ADA2D9"
+        ]
       },
       "echo": {
         "role": "neutral",
         "displayName": "Echo",
         "canonical": "#2A2152",
-        "tonalRamp": ["#0A0814", "#140F28", "#1F183D", "#2A2152", "#3E3179", "#5A48A6", "#8A7BC6", "#C0B7E0"]
+        "tonalRamp": [
+          "#0A0814",
+          "#140F28",
+          "#1F183D",
+          "#2A2152",
+          "#3E3179",
+          "#5A48A6",
+          "#8A7BC6",
+          "#C0B7E0"
+        ]
       },
       "glimmer": {
         "role": "neutral",
         "displayName": "Glimmer",
         "canonical": "#5B4D9A",
-        "tonalRamp": ["#100E1F", "#1F1B3B", "#2E2857", "#3D3573", "#4C428F", "#5B4D9A", "#8B80BC", "#C2BBDD"]
+        "tonalRamp": [
+          "#100E1F",
+          "#1F1B3B",
+          "#2E2857",
+          "#3D3573",
+          "#4C428F",
+          "#5B4D9A",
+          "#8B80BC",
+          "#C2BBDD"
+        ]
       },
       "mist": {
         "role": "neutral",
         "displayName": "Mist",
         "canonical": "#8E86B7",
-        "tonalRamp": ["#1C1A25", "#38344A", "#534E6E", "#6F6893", "#8E86B7", "#A9A3C9", "#C5C1DB", "#E2E0ED"]
+        "tonalRamp": [
+          "#1C1A25",
+          "#38344A",
+          "#534E6E",
+          "#6F6893",
+          "#8E86B7",
+          "#A9A3C9",
+          "#C5C1DB",
+          "#E2E0ED"
+        ]
       },
       "incandescent": {
         "role": "primary",
         "displayName": "Incandescent",
         "canonical": "#FF6A88",
-        "tonalRamp": ["#33151B", "#661F2E", "#99303F", "#CC4459", "#FF6A88", "#FF8CA3", "#FFADBE", "#FFCFD9"]
+        "tonalRamp": [
+          "#33151B",
+          "#661F2E",
+          "#99303F",
+          "#CC4459",
+          "#FF6A88",
+          "#FF8CA3",
+          "#FFADBE",
+          "#FFCFD9"
+        ]
       },
       "incandescent-deep": {
         "role": "primary",
         "displayName": "Incandescent Deep",
         "canonical": "#D8456B",
-        "tonalRamp": ["#2B0E15", "#56192A", "#81263F", "#AC3355", "#D8456B", "#E27290", "#EC9EB4", "#F5CBD9"]
+        "tonalRamp": [
+          "#2B0E15",
+          "#56192A",
+          "#81263F",
+          "#AC3355",
+          "#D8456B",
+          "#E27290",
+          "#EC9EB4",
+          "#F5CBD9"
+        ]
       },
       "display-white": {
         "role": "neutral",
         "displayName": "Display White",
         "canonical": "#FFFFFF",
-        "tonalRamp": ["#2A2735", "#413D52", "#5B566F", "#7A748F", "#9C96B0", "#C0BBD0", "#E2DFEB", "#FFFFFF"]
+        "tonalRamp": [
+          "#2A2735",
+          "#413D52",
+          "#5B566F",
+          "#7A748F",
+          "#9C96B0",
+          "#C0BBD0",
+          "#E2DFEB",
+          "#FFFFFF"
+        ]
       },
       "text": {
         "role": "neutral",
         "displayName": "Text",
         "canonical": "#8E86B7",
-        "tonalRamp": ["#1C1A25", "#38344A", "#534E6E", "#6F6893", "#8E86B7", "#A9A3C9", "#C5C1DB", "#E2E0ED"]
+        "tonalRamp": [
+          "#1C1A25",
+          "#38344A",
+          "#534E6E",
+          "#6F6893",
+          "#8E86B7",
+          "#A9A3C9",
+          "#C5C1DB",
+          "#E2E0ED"
+        ]
       },
       "text-quiet": {
         "role": "neutral",
         "displayName": "Text Quiet",
         "canonical": "rgb(142 134 183 / 0.85)",
-        "tonalRamp": ["#191722", "#332F44", "#4C4765", "#665F87", "#8078A6", "#9C95BE", "#BAB5D3", "#D9D6E8"]
+        "tonalRamp": [
+          "#191722",
+          "#332F44",
+          "#4C4765",
+          "#665F87",
+          "#8078A6",
+          "#9C95BE",
+          "#BAB5D3",
+          "#D9D6E8"
+        ]
       },
       "frame": {
         "role": "neutral",
         "displayName": "Frame",
         "canonical": "rgb(142 134 183 / 0.28)",
-        "tonalRamp": ["#100D1C", "#151228", "#1B1734", "#221D42", "#2A2450", "#332C60", "#3E3672", "#4A4186"]
+        "tonalRamp": [
+          "#100D1C",
+          "#151228",
+          "#1B1734",
+          "#221D42",
+          "#2A2450",
+          "#332C60",
+          "#3E3672",
+          "#4A4186"
+        ]
       },
       "frame-strong": {
         "role": "neutral",
         "displayName": "Frame Strong",
         "canonical": "rgb(142 134 183 / 0.50)",
-        "tonalRamp": ["#151222", "#1E1932", "#282243", "#332B55", "#3F3668", "#4C427C", "#5A4E90", "#695CA5"]
+        "tonalRamp": [
+          "#151222",
+          "#1E1932",
+          "#282243",
+          "#332B55",
+          "#3F3668",
+          "#4C427C",
+          "#5A4E90",
+          "#695CA5"
+        ]
       },
       "frame-control": {
         "role": "neutral",
         "displayName": "Frame Control",
         "canonical": "rgb(142 134 183 / 0.68)",
-        "tonalRamp": ["#1A1728", "#26213B", "#332C4F", "#413964", "#50467A", "#605491", "#7163A9", "#8373C2"]
+        "tonalRamp": [
+          "#1A1728",
+          "#26213B",
+          "#332C4F",
+          "#413964",
+          "#50467A",
+          "#605491",
+          "#7163A9",
+          "#8373C2"
+        ]
+      },
+      "syntax-key": {
+        "role": "tertiary",
+        "displayName": "Syntax Key",
+        "canonical": "#C9BFFF",
+        "tonalRamp": [
+          "#241d3d",
+          "#332a55",
+          "#463a70",
+          "#5b4d94",
+          "#7a6cb8",
+          "#9c8fd6",
+          "#C9BFFF",
+          "#e6e0ff"
+        ]
+      },
+      "syntax-num": {
+        "role": "tertiary",
+        "displayName": "Syntax Numeral",
+        "canonical": "#B9B0E6",
+        "tonalRamp": [
+          "#201a35",
+          "#2e264b",
+          "#3f3566",
+          "#544887",
+          "#7065a8",
+          "#9086c7",
+          "#B9B0E6",
+          "#ded9f5"
+        ]
       }
     },
     "typographyMeta": {
-      "hero": { "displayName": "Hero", "purpose": "The name, once, on the home page. wdth 112. Nothing else takes this step." },
-      "page": { "displayName": "Page", "purpose": "The h1 of every inner page. wdth 110, held to 16ch." },
-      "headline": { "displayName": "Headline", "purpose": "Every section h2. wdth 108, held to 18ch." },
-      "title": { "displayName": "Title", "purpose": "Row headings inside a section — a trade, a process step. wdth 105." },
-      "body-lead": { "displayName": "Body Lead", "purpose": "The lead paragraph under a hero or a page head. Weight 300, max-w-2xl." },
-      "body": { "displayName": "Body", "purpose": "Descriptive prose in cards and rows." },
-      "label": { "displayName": "Label", "purpose": "The largest tracked step — the wordmark in the header." },
-      "meta": { "displayName": "Meta", "purpose": "Field help and field errors." },
-      "caps": { "displayName": "Caps", "purpose": "The working label step — button text, nav links, card labels, locale switches, field labels." },
-      "micro": { "displayName": "Micro", "purpose": "Footer column heads, page meta, card index numbers, uniform names." },
-      "mono": { "displayName": "Mono", "purpose": "The shader source panel only. Monospace is for code, never a costume for 'technical'." }
+      "hero": {
+        "displayName": "Hero",
+        "purpose": "The name, once, on the home page. wdth 112. Nothing else takes this step."
+      },
+      "page": {
+        "displayName": "Page",
+        "purpose": "The h1 of every inner page. wdth 110, held to 16ch."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Every section h2. wdth 108, held to 18ch."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Row headings inside a section — a trade, a process step. wdth 105."
+      },
+      "body-lead": {
+        "displayName": "Body Lead",
+        "purpose": "The lead paragraph under a hero or a page head. Weight 300, max-w-2xl."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptive prose in cards and rows."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "The largest tracked step — the wordmark in the header."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Field help and field errors."
+      },
+      "caps": {
+        "displayName": "Caps",
+        "purpose": "The working label step — button text, nav links, card labels, locale switches, field labels."
+      },
+      "micro": {
+        "displayName": "Micro",
+        "purpose": "Footer column heads, page meta, card index numbers, uniform names."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "The shader source panel only. Monospace is for code, never a costume for 'technical'."
+      },
+      "read": {
+        "displayName": "Read",
+        "purpose": "Denser 15px reading step for legal copy, field text and strip values. Distinct from the 16px body; five components each spelled it out as a literal before it was declared."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Source lines in the live shader panel. Mono is admitted here because this is literal code, never as a costume for \"technical\"."
+      },
+      "code-val": {
+        "displayName": "Code Value",
+        "purpose": "Measured uniform readings beside the shader source."
+      }
     },
     "shadows": [
       {
@@ -109,14 +301,46 @@
       }
     ],
     "surfaces": [
-      { "name": "card", "value": "rgb(11 6 32 / 0.42)", "purpose": "Content card. The field stays visible through it." },
-      { "name": "field-rest", "value": "rgb(11 6 32 / 0.55)", "purpose": "Text input at rest." },
-      { "name": "contact-strip", "value": "rgb(11 6 32 / 0.60)", "purpose": "The level contact legend." },
-      { "name": "source-panel", "value": "rgb(11 6 32 / 0.72)", "purpose": "The shader source panel." },
-      { "name": "field-focus", "value": "rgb(20 12 51 / 0.75)", "purpose": "Text input while focused. The only place Abyss reaches the interface." },
-      { "name": "section-solid", "value": "rgb(11 6 32 / 0.80) + backdrop-blur-sm", "purpose": "A section that needs to sit on the void instead of the shader. Dims the field, never deletes it." },
-      { "name": "header-scrolled", "value": "rgb(11 6 32 / 0.85) + backdrop-blur-xl", "purpose": "The fixed header past 24px of scroll." },
-      { "name": "menu-overlay", "value": "rgb(11 6 32 / 0.95) + backdrop-blur-2xl", "purpose": "The mobile navigation overlay, teleported to body." }
+      {
+        "name": "card",
+        "value": "rgb(11 6 32 / 0.42)",
+        "purpose": "Content card. The field stays visible through it."
+      },
+      {
+        "name": "field-rest",
+        "value": "rgb(11 6 32 / 0.55)",
+        "purpose": "Text input at rest."
+      },
+      {
+        "name": "contact-strip",
+        "value": "rgb(11 6 32 / 0.60)",
+        "purpose": "The level contact legend."
+      },
+      {
+        "name": "source-panel",
+        "value": "rgb(11 6 32 / 0.72)",
+        "purpose": "The shader source panel."
+      },
+      {
+        "name": "field-focus",
+        "value": "rgb(20 12 51 / 0.75)",
+        "purpose": "Text input while focused. The only place Abyss reaches the interface."
+      },
+      {
+        "name": "section-solid",
+        "value": "rgb(11 6 32 / 0.80) + backdrop-blur-sm",
+        "purpose": "A section that needs to sit on the void instead of the shader. Dims the field, never deletes it."
+      },
+      {
+        "name": "header-scrolled",
+        "value": "rgb(11 6 32 / 0.85) + backdrop-blur-xl",
+        "purpose": "The fixed header past 24px of scroll."
+      },
+      {
+        "name": "menu-overlay",
+        "value": "rgb(11 6 32 / 0.95) + backdrop-blur-2xl",
+        "purpose": "The mobile navigation overlay, teleported to body."
+      }
     ],
     "materials": [
       {
@@ -136,19 +360,59 @@
       }
     ],
     "motion": [
-      { "name": "ease-portal", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The world's only easing curve. Effectively every transition in the system uses it." },
-      { "name": "duration-state", "value": "420ms", "purpose": "Colour and border-colour state on controls, links and labels." },
-      { "name": "duration-surface", "value": "520ms", "purpose": "Card and row state — frame lift, name colour, arrow travel." },
-      { "name": "duration-header", "value": "500ms", "purpose": "The header's compression, wash and blur as the page scrolls past 24px." },
-      { "name": "duration-sheen", "value": "1100ms", "purpose": "One full diagonal sheen pass across a frame." },
-      { "name": "duration-entrance", "value": "900ms", "purpose": "hero-rise, the one authored entrance in the site." },
-      { "name": "duration-reduced", "value": "1ms", "purpose": "What every transition collapses to under prefers-reduced-motion." }
+      {
+        "name": "ease-portal",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The world's only easing curve. Effectively every transition in the system uses it."
+      },
+      {
+        "name": "duration-state",
+        "value": "420ms",
+        "purpose": "Colour and border-colour state on controls, links and labels."
+      },
+      {
+        "name": "duration-surface",
+        "value": "520ms",
+        "purpose": "Card and row state — frame lift, name colour, arrow travel."
+      },
+      {
+        "name": "duration-header",
+        "value": "500ms",
+        "purpose": "The header's compression, wash and blur as the page scrolls past 24px."
+      },
+      {
+        "name": "duration-sheen",
+        "value": "1100ms",
+        "purpose": "One full diagonal sheen pass across a frame."
+      },
+      {
+        "name": "duration-entrance",
+        "value": "900ms",
+        "purpose": "hero-rise, the one authored entrance in the site."
+      },
+      {
+        "name": "duration-reduced",
+        "value": "1ms",
+        "purpose": "What every transition collapses to under prefers-reduced-motion."
+      }
     ],
     "breakpoints": [
-      { "name": "sm", "value": "640px" },
-      { "name": "md", "value": "768px" },
-      { "name": "source", "value": "900px" },
-      { "name": "lg", "value": "1024px" }
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "source",
+        "value": "900px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
     ]
   },
   "components": [
@@ -230,23 +494,96 @@
       "One authored entrance, on the hero only"
     ],
     "rules": [
-      { "name": "The Two Text Colours Rule", "body": "Only two values in this system are allowed to carry words: --text (Mist, 5.88:1) and --text-quiet (Mist/85, 4.51:1). Glimmer (2.68:1) and Echo (1.35:1) are rules, marks and non-informational strokes — never text, never placeholders, never line numbers, never a \"de-emphasised\" label. There is no third tier.", "section": "colors" },
-      { "name": "The Recession Floor Rule", "body": "--text-quiet is a floor, not a step on a ramp. It sits at 4.51:1 with essentially no headroom over 4.5:1, so nothing may be quieter than it. If something needs to recede further than Mist/85, change its size, its position, or its presence — never its opacity.", "section": "colors" },
-      { "name": "The Reserved Incandescent Rule", "body": "Incandescent marks two things and only two: what the visitor can act on, and what the machine is genuinely doing live. It is not a syntax-highlighting colour, not a numeric-literal colour, not an accent for headings, not a hover flourish on decorative type. Its scarcity is the entire reason it works.", "section": "colors" },
-      { "name": "The Control Boundary Rule", "body": "Anything a person can click, tap, or type into is bounded by --frame-control or by Incandescent. --frame is not a control boundary and must never be used as one.", "section": "colors" },
-      { "name": "The Uppercase Label Rule", "body": "Every label in the system is uppercase and tracked to exactly 0.3em, on one of four steps (micro / caps / meta / label). There is no lowercase small text and no intermediate tracking. Reach for a different step, never a different tracking.", "section": "typography" },
-      { "name": "The Light Display Rule", "body": "Display-scale type is weight 200 and widened, never bolded. Emphasis at display scale comes from size and from the width axis, not from weight.", "section": "typography" },
-      { "name": "The Content-Not-Kicker Rule", "body": "Supporting text sits below the heading it supports, as content. Nothing is ever placed above a heading as a small tracked eyebrow — PortalSection and PageHeader both carry their section label as an aria-label for the accessible name and render no kicker at all. On the hero the trades read below the name for exactly this reason.", "section": "typography" },
-      { "name": "The Monospace-Is-Code Rule", "body": "Monospace appears only where the content is literally source code. It is not a costume for \"technical\".", "section": "typography" },
-      { "name": "The Tabular Figures Rule", "body": "Any number read as a quantity — a phone number, an FPS readout, a card index, a uniform value, the loader count — carries .tnum (font-variant-numeric: tabular-nums).", "section": "typography" },
-      { "name": "The One Ground Rule", "body": "The shader field is fixed inset-0 at z-0 in the layout, behind every route. Content sits at z-10 above it. No page paints its own opaque background over the full viewport; a section that needs to sit quieter uses bg-void/80 with a backdrop blur, so the field is dimmed rather than deleted.", "section": "layout" },
-      { "name": "The Hairline Spine Rule", "body": "Sections are separated by a 1px --frame rule, never by a change of background colour alone.", "section": "layout" },
-      { "name": "The No-Shadow Rule", "body": "Zero box-shadow, zero drop-shadow, zero text-shadow. If a surface needs to separate from what is behind it, raise its translucency, add a backdrop blur, or give it a hairline — in that order.", "section": "elevation" },
-      { "name": "The Scrim-Not-Shadow Rule", "body": "The reading scrim is the only shadow-like device in the system, it lives inside ShaderField, and it exists so that type always wins the contrast fight against a moving ground. It is never reused as a decorative gradient on a component.", "section": "elevation" },
-      { "name": "The Square Corner Rule", "body": "Radius is 0 on anything rectangular. 999px exists only for shapes that are actually circles.", "section": "shapes" },
-      { "name": "The Frame-Not-Fill Rule", "body": "A component is defined by a 1px frame. Fills, where they exist, are translucent washes of the Void or the Abyss — never a flat opaque panel, and never a colour block.", "section": "shapes" },
-      { "name": "The Authored-Mesh Rule", "body": "Where an image would go, a seeded SVG mesh goes instead. The same seed always draws the same mesh, so the server and the client agree and hydration stays quiet.", "section": "shapes" },
-      { "name": "The One Entrance Rule", "body": "There is exactly one authored entrance in the site: hero-rise (rise 18px, blur 6px → 0, staggered 0 / 90 / 200 / 300 / 400ms). It happens once, on the hero, and no other section repeats it. Nothing scroll-reveals.", "section": "components" }
+      {
+        "name": "The Two Text Colours Rule",
+        "body": "Only two values in this system are allowed to carry words: --text (Mist, 5.88:1) and --text-quiet (Mist/85, 4.51:1). Glimmer (2.68:1) and Echo (1.35:1) are rules, marks and non-informational strokes — never text, never placeholders, never line numbers, never a \"de-emphasised\" label. There is no third tier.",
+        "section": "colors"
+      },
+      {
+        "name": "The Recession Floor Rule",
+        "body": "--text-quiet is a floor, not a step on a ramp. It sits at 4.51:1 with essentially no headroom over 4.5:1, so nothing may be quieter than it. If something needs to recede further than Mist/85, change its size, its position, or its presence — never its opacity.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reserved Incandescent Rule",
+        "body": "Incandescent marks two things and only two: what the visitor can act on, and what the machine is genuinely doing live. It is not a syntax-highlighting colour, not a numeric-literal colour, not an accent for headings, not a hover flourish on decorative type. Its scarcity is the entire reason it works.",
+        "section": "colors"
+      },
+      {
+        "name": "The Control Boundary Rule",
+        "body": "Anything a person can click, tap, or type into is bounded by --frame-control or by Incandescent. --frame is not a control boundary and must never be used as one.",
+        "section": "colors"
+      },
+      {
+        "name": "The Uppercase Label Rule",
+        "body": "Every label in the system is uppercase and tracked to exactly 0.3em, on one of four steps (micro / caps / meta / label). There is no lowercase small text and no intermediate tracking. Reach for a different step, never a different tracking.",
+        "section": "typography"
+      },
+      {
+        "name": "The Light Display Rule",
+        "body": "Display-scale type is weight 200 and widened, never bolded. Emphasis at display scale comes from size and from the width axis, not from weight.",
+        "section": "typography"
+      },
+      {
+        "name": "The Content-Not-Kicker Rule",
+        "body": "Supporting text sits below the heading it supports, as content. Nothing is ever placed above a heading as a small tracked eyebrow — PortalSection and PageHeader both carry their section label as an aria-label for the accessible name and render no kicker at all. On the hero the trades read below the name for exactly this reason.",
+        "section": "typography"
+      },
+      {
+        "name": "The Monospace-Is-Code Rule",
+        "body": "Monospace appears only where the content is literally source code. It is not a costume for \"technical\".",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Figures Rule",
+        "body": "Any number read as a quantity — a phone number, an FPS readout, a card index, a uniform value, the loader count — carries .tnum (font-variant-numeric: tabular-nums).",
+        "section": "typography"
+      },
+      {
+        "name": "The One Ground Rule",
+        "body": "The shader field is fixed inset-0 at z-0 in the layout, behind every route. Content sits at z-10 above it. No page paints its own opaque background over the full viewport; a section that needs to sit quieter uses bg-void/80 with a backdrop blur, so the field is dimmed rather than deleted.",
+        "section": "layout"
+      },
+      {
+        "name": "The Hairline Spine Rule",
+        "body": "Sections are separated by a 1px --frame rule, never by a change of background colour alone.",
+        "section": "layout"
+      },
+      {
+        "name": "The No-Shadow Rule",
+        "body": "Zero box-shadow, zero drop-shadow, zero text-shadow. If a surface needs to separate from what is behind it, raise its translucency, add a backdrop blur, or give it a hairline — in that order.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Scrim-Not-Shadow Rule",
+        "body": "The reading scrim is the only shadow-like device in the system, it lives inside ShaderField, and it exists so that type always wins the contrast fight against a moving ground. It is never reused as a decorative gradient on a component.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Corner Rule",
+        "body": "Radius is 0 on anything rectangular. 999px exists only for shapes that are actually circles.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Frame-Not-Fill Rule",
+        "body": "A component is defined by a 1px frame. Fills, where they exist, are translucent washes of the Void or the Abyss — never a flat opaque panel, and never a colour block.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Authored-Mesh Rule",
+        "body": "Where an image would go, a seeded SVG mesh goes instead. The same seed always draws the same mesh, so the server and the client agree and hydration stays quiet.",
+        "section": "shapes"
+      },
+      {
+        "name": "The One Entrance Rule",
+        "body": "There is exactly one authored entrance in the site: hero-rise (rise 18px, blur 6px → 0, staggered 0 / 90 / 200 / 300 / 400ms). It happens once, on the hero, and no other section repeats it. Nothing scroll-reveals.",
+        "section": "components"
+      },
+      {
+        "name": "The Unreserved Syntax Rule",
+        "body": "Source highlighting uses two lavender tiers, never Incandescent. Numeric literals are the most frequent token in the shader, and spending the action-reserved colour on all of them would make it the most common colour on the screen and dilute the one thing it marks.",
+        "section": "colors"
+      }
     ],
     "dos": [
       "Do build every component from a 1px frame plus a translucent Void wash. Frames describe; fills would hide the field.",
