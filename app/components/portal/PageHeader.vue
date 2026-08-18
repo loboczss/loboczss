@@ -26,7 +26,7 @@ withDefaults(
 
       <div class="flex flex-col gap-7">
         <!-- Kicker removed: craft-floor ban, unconditional. -->
-        <h1 class="page-head">{{ title }}</h1>
+        <h1 class="page-head text-page">{{ title }}</h1>
 
         <p v-if="lead" class="max-w-2xl text-base font-light leading-relaxed text-mist md:text-lg">
           {{ lead }}
@@ -41,10 +41,7 @@ withDefaults(
 <style scoped>
 .page-head {
   color: #fff;
-  font-size: clamp(2.5rem, 7vw, 5.5rem);
   font-weight: 200;
-  line-height: 0.98;
-  letter-spacing: -0.025em;
   font-variation-settings: 'wdth' 110;
   text-transform: uppercase;
   max-width: 16ch;

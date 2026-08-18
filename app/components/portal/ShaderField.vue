@@ -109,6 +109,7 @@ const draw = (now: number) => {
     telemetry.width = canvas.value.width
     telemetry.height = canvas.value.height
     telemetry.scale = scale
+    telemetry.intensity = props.intensity
     telemetry.fps = fpsWindow
     lastPublish = now
     frameCount = 0

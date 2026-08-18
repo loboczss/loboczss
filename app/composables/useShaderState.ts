@@ -21,6 +21,8 @@ export interface ShaderState {
   height: number
   /** Resolution scale, lowered automatically when frames run long. */
   scale: number
+  /** The uniform the field is actually being fed. */
+  intensity: number
   /** Rolling frames per second. */
   fps: number
   /** Whatever the driver reports, or null when it refuses to say. */
@@ -35,6 +37,7 @@ const state = reactive<ShaderState>({
   width: 0,
   height: 0,
   scale: 1,
+  intensity: 1,
   fps: 0,
   renderer: null,
 })

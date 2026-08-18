@@ -23,7 +23,7 @@ const trades = [
         :key="t.n"
         class="trade group grid gap-6 border-t border-[var(--frame)] py-10 md:grid-cols-11 md:gap-10 md:py-14"
       >
-        <h3 class="trade__name md:col-span-5">{{ $t(t.title) }}</h3>
+        <h3 class="trade__name md:col-span-5 text-title">{{ $t(t.title) }}</h3>
 
         <p class="text-sm leading-relaxed text-mist md:col-span-4 md:text-base">
           {{ $t(t.body) }}
@@ -41,10 +41,7 @@ const trades = [
 <style scoped>
 .trade__name {
   color: #fff;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 200;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
   text-transform: uppercase;
   font-variation-settings: 'wdth' 105;
   transition: color 480ms cubic-bezier(0.16, 1, 0.3, 1);

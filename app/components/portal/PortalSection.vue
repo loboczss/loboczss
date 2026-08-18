@@ -31,7 +31,7 @@ withDefaults(
           <!-- No kicker above the heading: the craft floor bans it outright,
                and neither the direction contract nor the world's card can
                authorise it. The heading carries its own weight. -->
-          <h2 v-if="heading" class="section-head">{{ heading }}</h2>
+          <h2 v-if="heading" class="section-head text-headline">{{ heading }}</h2>
         </div>
 
         <p v-if="lead" class="max-w-md text-base font-light leading-relaxed text-mist">
@@ -47,10 +47,7 @@ withDefaults(
 <style scoped>
 .section-head {
   color: #fff;
-  font-size: clamp(2rem, 5vw, 3.75rem);
   font-weight: 200;
-  line-height: 1.02;
-  letter-spacing: -0.02em;
   font-variation-settings: 'wdth' 108;
   text-transform: uppercase;
   max-width: 18ch;

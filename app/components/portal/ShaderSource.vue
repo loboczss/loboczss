@@ -13,8 +13,13 @@ import { useShaderState } from '~/composables/useShaderState'
  */
 const t = useShaderState()
 
+/**
+ * Painted once. Calling paint() from the template re-ran four regex passes
+ * over every line on each 10Hz telemetry write — roughly 280 regex ops a
+ * second, on the same main thread the field is competing for.
+ */
 const lines = computed(() =>
-  FRAG.replace(/^\n/, '').replace(/\n$/, '').split('\n')
+  FRAG.replace(/^\n/, '').replace(/\n$/, '').split('\n').map(paint)
 )
 
 /** Uniform readings. Every one is measured; `—` means the driver would not say. */
@@ -22,7 +27,7 @@ const uniforms = computed(() => [
   { name: 'u_time', value: t.time.toFixed(2) },
   { name: 'u_mouse', value: `${t.mouseX.toFixed(3)}, ${t.mouseY.toFixed(3)}` },
   { name: 'u_res', value: t.width ? `${t.width} × ${t.height}` : '—' },
-  { name: 'u_intensity', value: '1.00' },
+  { name: 'u_intensity', value: t.intensity.toFixed(2) },
 ])
 
 /** Highlight only what GLSL actually distinguishes: types, keywords, numbers. */
@@ -55,7 +60,7 @@ const paint = (line: string) => {
         v-for="(l, i) in lines"
         :key="i"
         class="ssrc__line"
-      ><span class="ssrc__ln tnum" aria-hidden="true">{{ String(i + 1).padStart(2, '0') }}</span><span v-html="paint(l)"></span></code></pre>
+      ><span class="ssrc__ln tnum" aria-hidden="true">{{ String(i + 1).padStart(2, '0') }}</span><span v-html="l"></span></code></pre>
 
       <aside class="ssrc__meters" :aria-label="$t('source.uniforms_label')">
         <div v-for="u in uniforms" :key="u.name" class="ssrc__meter">
@@ -158,7 +163,9 @@ const paint = (line: string) => {
 .ssrc__ln {
   display: inline-block;
   width: 2.25rem;
-  color: var(--glimmer);
+  /* Glimmer measured 2.89:1 here. It is not a text colour anywhere else and
+     it is not one inside this panel either. */
+  color: var(--text-quiet);
   user-select: none;
 }
 
@@ -168,7 +175,10 @@ const paint = (line: string) => {
 }
 
 .ssrc__code :deep(.c-num) {
-  color: var(--incandescent);
+  /* Not incandescent: numeric literals are the most frequent token in this
+     shader, and spending the action-reserved colour on all of them would
+     dilute the one thing it marks. */
+  color: #b9b0e6;
   font-style: normal;
 }
 

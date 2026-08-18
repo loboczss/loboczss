@@ -10,7 +10,7 @@ import ContactStrip from '~/components/portal/ContactStrip.vue'
       <div class="flex flex-col gap-8">
         <!-- The trades read BELOW the name, as content. Above it they would
              be a kicker, which the craft floor bans outright. -->
-        <h1 class="hero-in hero-word" style="--d: 0ms">Loboczss</h1>
+        <h1 class="hero-in hero-word text-hero" style="--d: 0ms">Loboczss</h1>
 
         <p class="hero-in text-caps uppercase text-mist" style="--d: 90ms">
           {{ $t('hero.kicker') }}
@@ -44,10 +44,7 @@ import ContactStrip from '~/components/portal/ContactStrip.vue'
 <style scoped>
 .hero-word {
   color: #fff;
-  font-size: clamp(3.25rem, 13vw, 11.5rem);
   font-weight: 200;
-  line-height: 0.92;
-  letter-spacing: -0.03em;
   font-variation-settings: 'wdth' 112;
   text-transform: uppercase;
 }
