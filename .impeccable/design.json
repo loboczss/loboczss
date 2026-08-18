@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-18T20:47:28.574Z",
+  "title": "Design System: Loboczss",
+  "extensions": {
+    "colorMeta": {
+      "violet-signal": {
+        "role": "primary",
+        "displayName": "Violeta Sinal",
+        "canonical": "#8b5cf6",
+        "tonalRamp": [
+          "#2e1065",
+          "#4c1d95",
+          "#5b21b6",
+          "#6d28d9",
+          "#7c3aed",
+          "#8b5cf6",
+          "#a78bfa",
+          "#c4b5fd"
+        ]
+      },
+      "violet-deep": {
+        "role": "primary",
+        "displayName": "Violeta Profundo",
+        "canonical": "#6d28d9",
+        "tonalRamp": [
+          "#2e1065",
+          "#4c1d95",
+          "#5b21b6",
+          "#6d28d9",
+          "#7c3aed",
+          "#8b5cf6",
+          "#a78bfa",
+          "#c4b5fd"
+        ]
+      },
+      "emerald-live": {
+        "role": "secondary",
+        "displayName": "Esmeralda Vivo",
+        "canonical": "#10b981",
+        "tonalRamp": [
+          "#022c22",
+          "#064e3b",
+          "#065f46",
+          "#047857",
+          "#059669",
+          "#10b981",
+          "#34d399",
+          "#6ee7b7"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Noite",
+        "canonical": "#0b1326",
+        "tonalRamp": [
+          "#060d20",
+          "#0b1326",
+          "#131b2e",
+          "#171f33",
+          "#222a3e",
+          "#2d3449",
+          "#dbe2fd"
+        ]
+      },
+      "surface-content": {
+        "role": "neutral",
+        "displayName": "Luz Fria",
+        "canonical": "#dbe2fd",
+        "tonalRamp": [
+          "#060d20",
+          "#0b1326",
+          "#131b2e",
+          "#171f33",
+          "#222a3e",
+          "#2d3449",
+          "#dbe2fd"
+        ]
+      },
+      "surface-day": {
+        "role": "neutral",
+        "displayName": "Papel Frio (tema claro)",
+        "canonical": "#cbd5e1",
+        "tonalRamp": [
+          "#0f172a",
+          "#475569",
+          "#64748b",
+          "#94a3b8",
+          "#cbd5e1",
+          "#e2e8f0",
+          "#f1f5f9"
+        ]
+      },
+      "surface-content-day": {
+        "role": "neutral",
+        "displayName": "Tinta (tema claro)",
+        "canonical": "#0f172a",
+        "tonalRamp": [
+          "#0f172a",
+          "#475569",
+          "#64748b",
+          "#94a3b8",
+          "#cbd5e1",
+          "#e2e8f0",
+          "#f1f5f9"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Exclusivo do nome no hero. Uma vez por site."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Abertura de secao e titulo de rodape. Carrega a voz editorial."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Nomes de servico, titulos de projeto, cabecalhos de card."
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "Somente numerais. Black italico — a assinatura mais reconhecivel do sistema."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragrafos, sempre a 50-60% de opacidade contra o titulo ao lado."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Micro-label de 10px em caixa alta. A unidade mais repetida do sistema."
+      }
+    },
+    "shadows": [
+      {
+        "name": "none",
+        "value": "none",
+        "purpose": "O padrao. Profundidade vem da escada tonal, nao da luz. Ver a regra The Ladder Before Light."
+      },
+      {
+        "name": "glass-lift",
+        "value": "0 14px 45px rgba(0,0,0,0.45)",
+        "purpose": "Unica sombra legitima: assenta um painel de vidro sobre fotografia, onde nao existe degrau tonal para usar."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control",
+        "value": "300ms ease",
+        "purpose": "Botoes, links e trocas de cor. Rapido o bastante para ler como clique."
+      },
+      {
+        "name": "material",
+        "value": "700ms ease",
+        "purpose": "Hover de card e revelacao de imagem. Lento o bastante para ler como material se movendo."
+      },
+      {
+        "name": "overlay",
+        "value": "500ms ease-in-out",
+        "purpose": "Entrada do menu mobile e do dropdown de idioma."
+      },
+      {
+        "name": "header-shift",
+        "value": "300ms ease",
+        "purpose": "Troca de material do cabecalho ao passar de 20px de scroll."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      },
+      {
+        "name": "container",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "O CTA do sistema. Pill violeta com seta que desliza no hover — o deslocamento e o feedback principal.",
+      "html": "<button class=\"ds-btn-primary\">Iniciar Projeto<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"19\" x2=\"19\" y2=\"12\"/><line x1=\"19\" y1=\"12\" x2=\"12\" y2=\"5\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 12px; background: #8b5cf6; color: #fff; padding: 20px 40px; border: none; border-radius: 9999px; font-family: Inter, Outfit, system-ui, sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; cursor: pointer; transition: background 300ms ease; } .ds-btn-primary svg { width: 16px; height: 16px; transition: transform 300ms ease; } .ds-btn-primary:hover { background: #6d28d9; } .ds-btn-primary:hover svg { transform: translateX(4px); } .ds-btn-primary:focus-visible { outline: 2px solid #8b5cf6; outline-offset: 3px; } .ds-btn-primary:disabled { opacity: 0.5; filter: grayscale(1); cursor: not-allowed; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Acao terciaria. Sem fundo nem borda — so o label, que acende no hover.",
+      "html": "<button class=\"ds-btn-ghost\">Ver portfolio completo //</button>",
+      "css": ".ds-btn-ghost { background: transparent; border: none; padding: 8px 16px; color: var(--surface-content, #dbe2fd); opacity: 0.4; font-family: Inter, Outfit, system-ui, sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; cursor: pointer; transition: opacity 300ms ease, color 300ms ease; } .ds-btn-ghost:hover { opacity: 1; } .ds-btn-ghost:focus-visible { outline: 2px solid #8b5cf6; outline-offset: 2px; opacity: 1; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Campo sem borda, afundado um degrau na escada tonal. O label acende em violeta antes do campo receber o anel de foco.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-field-name\">Nome</label><input id=\"ds-field-name\" type=\"text\" placeholder=\"seu nome\" /></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 8px; width: 100%; } .ds-field label { padding-left: 8px; color: var(--surface-content, #dbe2fd); opacity: 0.4; font-family: Inter, Outfit, system-ui, sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; transition: color 300ms ease, opacity 300ms ease; } .ds-field:focus-within label { color: #8b5cf6; opacity: 1; } .ds-field input { width: 100%; padding: 16px 24px; border: none; border-radius: 16px; background: var(--surface-lowest, #060d20); color: var(--surface-content, #dbe2fd); font-family: Inter, Outfit, system-ui, sans-serif; font-size: 15px; font-weight: 500; box-shadow: inset 0 2px 4px rgba(0,0,0,0.25); outline: none; transition: background 500ms ease, box-shadow 300ms ease; } .ds-field input::placeholder { color: var(--surface-content, #dbe2fd); opacity: 0.2; } .ds-field input:focus { background: var(--surface-container, #171f33); box-shadow: inset 0 2px 4px rgba(0,0,0,0.25), 0 0 0 2px rgba(139,92,246,0.4); }"
+    },
+    {
+      "name": "Soft Card",
+      "kind": "card",
+      "refersTo": "card-soft",
+      "description": "Card de conteudo: um degrau tonal acima da secao, raio de 40px, sem borda e sem sombra. O hover sobe mais um degrau.",
+      "html": "<div class=\"ds-card-soft\"><h3>Automacao com I.A.</h3><p>Fluxos inteligentes movidos por LLMs e pipelines integrados.</p></div>",
+      "css": ".ds-card-soft { background: var(--surface-container, #171f33); color: var(--surface-content, #dbe2fd); border: none; border-radius: 40px; padding: 40px; transition: background 700ms ease, transform 700ms ease; } .ds-card-soft h3 { margin: 0 0 12px; font-family: Outfit, Inter, system-ui, sans-serif; font-size: 30px; font-weight: 600; letter-spacing: -0.05em; line-height: 1.1; } .ds-card-soft p { margin: 0; font-family: Inter, Outfit, system-ui, sans-serif; font-size: 15px; line-height: 1.625; opacity: 0.5; } .ds-card-soft:hover { background: var(--surface-high, #222a3e); transform: scale(1.01); }"
+    },
+    {
+      "name": "Section Opener",
+      "kind": "custom",
+      "refersTo": "card-editorial",
+      "description": "Assinatura do sistema: regua fina no topo, label de 10px em violeta, headline em Outfit. Abre praticamente toda secao do site.",
+      "html": "<section class=\"ds-section-open\"><span class=\"ds-section-open__label\">Capacidades</span><h2>Engenharia Visionaria.</h2></section>",
+      "css": ".ds-section-open { display: flex; flex-direction: column; gap: 16px; padding-top: 40px; border-top: 1px solid var(--surface-container, #171f33); } .ds-section-open__label { color: #8b5cf6; font-family: Inter, Outfit, system-ui, sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; } .ds-section-open h2 { margin: 0; color: var(--surface-content, #dbe2fd); font-family: Outfit, Inter, system-ui, sans-serif; font-size: clamp(3rem, 6vw, 4.5rem); font-weight: 600; line-height: 1; letter-spacing: -0.05em; }"
+    },
+    {
+      "name": "Slab (no instance)",
+      "kind": "custom",
+      "refersTo": "kpi-slab",
+      "description": "Padrao que inverte a paleta inteira. Sua unica instancia era a faixa de metricas da home, removida por conter numeros fabricados. O padrao segue definido; reintroduzir exige conteudo verdadeiro.",
+      "html": "<div class=\"ds-kpi-slab\"><div class=\"ds-kpi-slab__item\"><span class=\"ds-kpi-slab__value\">50+</span><span class=\"ds-kpi-slab__label\">Projetos Ativos</span></div><div class=\"ds-kpi-slab__item\"><span class=\"ds-kpi-slab__value\">10x</span><span class=\"ds-kpi-slab__label\">Ganho de Eficiencia</span></div></div>",
+      "css": ".ds-kpi-slab { display: grid; grid-template-columns: repeat(2, 1fr); background: #8b5cf6; color: #fff; padding: 56px 48px; border-radius: 0; background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.06) 0, rgba(255,255,255,0.06) 1px, transparent 0, transparent 50%); background-size: 32px 32px; } .ds-kpi-slab__item { display: flex; flex-direction: column; gap: 8px; padding: 0 32px; } .ds-kpi-slab__item + .ds-kpi-slab__item { border-left: 1px solid rgba(255,255,255,0.1); } .ds-kpi-slab__value { font-family: Outfit, Inter, system-ui, sans-serif; font-size: clamp(3.5rem, 8vw, 6.5rem); font-weight: 900; font-style: italic; line-height: 1; letter-spacing: -0.05em; } .ds-kpi-slab__label { font-family: Inter, Outfit, system-ui, sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.25em; opacity: 0.5; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Link de navegacao em tipografia de label. Hover acende em violeta.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav__link\">Projetos</a><a href=\"#\" class=\"ds-nav__link\">Servicos</a><a href=\"#\" class=\"ds-nav__link\">Contato</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 32px; } .ds-nav__link { color: var(--surface-content, #dbe2fd); opacity: 0.6; text-decoration: none; font-family: Inter, Outfit, system-ui, sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; transition: color 300ms ease, opacity 300ms ease; } .ds-nav__link:hover { color: #8b5cf6; opacity: 1; } .ds-nav__link:focus-visible { outline: 2px solid #8b5cf6; outline-offset: 4px; opacity: 1; }"
+    },
+    {
+      "name": "Pill Control",
+      "kind": "chip",
+      "refersTo": "button-ghost",
+      "description": "Controle compacto do cabecalho — seletor de idioma e toggle de tema. Pill de superficie elevada, sem contorno.",
+      "html": "<button class=\"ds-pill\">pt<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M19 9l-7 7-7-7\"/></svg></button>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; gap: 8px; background: var(--surface-container, #171f33); color: var(--surface-content, #dbe2fd); border: none; border-radius: 9999px; padding: 6px 12px; font-family: Inter, Outfit, system-ui, sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; transition: background 300ms ease; } .ds-pill svg { width: 12px; height: 12px; opacity: 0.5; } .ds-pill:hover { background: var(--surface-high, #222a3e); } .ds-pill:focus-visible { outline: 2px solid #8b5cf6; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Oficina Sob Vidro",
+    "overview": "Uma oficina de trabalho vista atraves de uma parede de vidro. O trabalho por tras e reto, tecnico e editorial: tipografia enorme, reguas finas, servicos numerados 01/02/03, uma malha de pontos ao fundo. O vidro e o que fica entre voce e ele — paineis translucidos sobre fotografia, desfoque, uma escada de seis superficies tonais que faz a profundidade sem nunca desenhar uma sombra. Nada flutua por decoracao; o que flutua e porque esta literalmente na frente de outra coisa.\n\nA densidade e baixa e deliberada. Secoes respiram 128px em cima e embaixo, o texto para em max-w-7xl (1280px) mesmo quando a secao sangra de ponta a ponta, e a hierarquia se resolve por contraste brutal de escala — um titulo de 13rem contra um label de 10px, sem nada no meio para amortecer. O sistema e nativamente escuro: a fundacao noturna (#0b1326) e onde ele foi desenhado, e o modo claro e uma inversao da mesma escada tonal, nao um segundo tema com regras proprias.\n\nA personalidade vem do atrito entre dois materiais. A arquitetura e reta — secoes, slabs e blocos de conteudo tem canto vivo. Os controles sao macios — botao redondo por completo, input de 16px, card de 40px. Voce sente a diferenca entre o que e edificio e o que e maquina antes de ler qualquer palavra.",
+    "keyCharacteristics": [
+      "Escuro como estado natural, claro como inversao da mesma escada",
+      "Contraste extremo de escala tipografica, sem degraus intermediarios",
+      "Regua fina como divisor; contorno nunca envolve",
+      "Profundidade por camada tonal e vidro, quase nunca por sombra",
+      "Arquitetura reta, controles redondos",
+      "No maximo um slab de cor saturada por pagina (padrao definido, hoje sem instancia)"
+    ],
+    "rules": [
+      {
+        "name": "The Single Slab Rule",
+        "body": "O violeta inunda no maximo uma secao por pagina. Nenhuma pagina exerce esse direito hoje: a faixa de metricas que o ocupava foi removida por conter dados fabricados. Em qualquer outro lugar o violeta e pontuacao: um ponto final, uma regua de 2px, um label de 10px, um botao. A raridade e o que faz o slab funcionar; dois slabs matam os dois.",
+        "section": "colors"
+      },
+      {
+        "name": "The Emerald Is Alive Rule",
+        "body": "Esmeralda so aparece onde algo esta vivo, correto ou obrigatorio. Um esmeralda decorativo — num titulo, num fundo, num icone sem estado — quebra a leitura de todos os outros.",
+        "section": "colors"
+      },
+      {
+        "name": "The Never-Pure-White Rule",
+        "body": "Texto sobre fundo escuro e surface-content, nunca #ffffff. Branco puro so existe dentro do slab violeta e sobre fotografia, onde o contraste ja e forcado por outro meio.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Outfit grita (display, headline, title, metric), Inter fala (body, label). Nenhum papel mistura as duas, e nenhum texto novo introduz uma terceira familia.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ten-Pixel Label Rule",
+        "body": "Todo micro-label e 10px / peso 700 / caixa alta / 0.2em de tracking. Sem excecao de tamanho: se nao cabe, corte a palavra, nao o tamanho.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Middle-Ground Rule",
+        "body": "A hierarquia vive nos extremos. Entre um headline de 5.5rem e um label de 10px nao entra um subtitulo de 1.5rem para suavizar a queda — a queda e o efeito.",
+        "section": "typography"
+      },
+      {
+        "name": "The Section-Owns-Its-Padding Rule",
+        "body": "Nenhum wrapper global limita largura. Uma secao nova traz o proprio px-6 md:px-12 lg:px-24 e o proprio miolo max-w-7xl. Quem esquece, cola no canto da tela.",
+        "section": "layout"
+      },
+      {
+        "name": "The Glass Floats, Nothing Else Does Rule",
+        "body": "Desfoque so em elemento que cobre outro conteudo. Um card na grade nao e vidro; ele e um degrau da escada.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Ladder Before Light Rule",
+        "body": "Precisa separar dois planos? Suba um degrau na escada tonal. Sombra e o ultimo recurso, nao o primeiro.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Straight Architecture, Round Controls Rule",
+        "body": "Se e edificio, canto vivo. Se e maquina, canto macio. Um card de conteudo com raio de 40px dentro de uma secao reta e a assinatura; um slab de secao com raio e um erro.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Rule Divides, The Outline Never Wraps Rule",
+        "body": "Uma linha de 1px e legitima quando separa dois blocos ao longo de um eixo — topo de secao, divisor de coluna, acento lateral. Nunca quando contorna os quatro lados de um container. Se o container precisa se destacar, ele sobe um degrau na escada tonal.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do abrir toda secao com a triade regua fina + label de 10px violeta + headline em Outfit.",
+      "Do separar planos subindo um degrau na escada tonal (surface -> surface-container -> surface-high) antes de considerar qualquer sombra.",
+      "Do dar a cada secao o proprio px-6 md:px-12 lg:px-24 e um miolo max-w-7xl, porque nao existe container global.",
+      "Do manter numerais de item no formato 01 / 02 / 03 em label de 10px, nunca 1. ou bullet.",
+      "Do reservar o italico black exclusivamente para numeros.",
+      "Do usar surface-content para texto, inclusive dentro de cards — o tema claro depende disso.",
+      "Do deixar o violeta inundar no maximo uma secao por pagina."
+    ],
+    "donts": [
+      "Don't contornar um container com borda. Regua divide ao longo de um eixo; contorno nunca envolve os quatro lados.",
+      "Don't escrever text-white, border-white/5 ou bg-white/5 fixos em superficie tematizada. Hoje BaseCard, KpiCard e o label do BaseInput fazem isso, e o resultado no tema claro e texto branco sobre cinza medio — ilegivel. Sempre surface-content.",
+      "Don't usar bg-primary-dark ou bg-secondary-dark: essas classes nao existem na configuracao do projeto, entao o hover do BaseButton primario hoje nao faz nada. Use violet-deep (primary-700).",
+      "Don't arredondar secao, slab ou bloco de conteudo. Raio pertence a controle.",
+      "Don't introduzir um terceiro acento. A paleta e violeta + esmeralda sobre a escada azul-noite.",
+      "Don't usar esmeralda como decoracao — ele significa estado vivo, correto ou obrigatorio.",
+      "Don't amortecer a hierarquia com um tamanho intermediario entre headline e label.",
+      "Don't aplicar desfoque em elemento que nao esta sobreposto a outro conteudo."
+    ]
+  }
+}

@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -12,7 +13,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
     '@nuxtjs/i18n'
   ],
 
@@ -28,26 +28,20 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/tailwind.css'],
 
-  colorMode: {
-    preference: 'system',
-    fallback: 'dark', // the site is designed dark-first
-    classSuffix: '', // Tailwind class strategy uses no suffix by default (dark class)
-  },
-
   app: {
     head: {
       title: 'Loboczss',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Engenharia de experiências digitais premium.' }
+        { name: 'theme-color', content: '#0B0620' },
+        { name: 'description', content: 'Juan Reis (Loboczss): aplicativos, sites e automações com I.A.' }
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Inter:wght@100..900&display=swap' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon-light.svg', media: '(prefers-color-scheme: light)' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon-dark.svg', media: '(prefers-color-scheme: dark)' }
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
       ]
     }
   }

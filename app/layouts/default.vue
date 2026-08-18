@@ -1,27 +1,31 @@
 <script setup lang="ts">
-import GlobalHeader from '~/components/header/GlobalHeader.vue';
-import GlobalFooter from '~/components/footer/GlobalFooter.vue';
+import { ref } from '#imports'
+import ShaderField from '~/components/portal/ShaderField.vue'
+import PortalHeader from '~/components/portal/PortalHeader.vue'
+import PortalFooter from '~/components/portal/PortalFooter.vue'
+import PortalLoader from '~/components/portal/PortalLoader.vue'
+
+/**
+ * The portal is full-bleed: the shader is the site's ground, fixed behind
+ * every route, not a hero decoration that stops at the fold.
+ */
+const shaderReady = ref(false)
 </script>
 
 <template>
-  <div class="min-h-screen bg-surface text-surface-content font-sans transition-colors duration-500 flex flex-col selection:bg-primary/30">
-    <!-- Header Global -->
-    <GlobalHeader />
+  <div class="relative min-h-screen">
+    <div class="fixed inset-0 z-0">
+      <ShaderField :intensity="1" @ready="shaderReady = true" />
+    </div>
 
-    <!-- Removed container mx-auto for full width editorial experience -->
-    <main class="flex-grow">
+    <PortalLoader :shader-ready="shaderReady" />
+
+    <PortalHeader />
+
+    <main class="relative z-10">
       <slot />
     </main>
 
-    <!-- Footer Global -->
-    <GlobalFooter />
+    <PortalFooter />
   </div>
 </template>
-
-<style>
-/* Global scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
-
-</style>

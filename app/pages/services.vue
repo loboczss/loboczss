@@ -1,21 +1,26 @@
-<template>
-  <main class="min-h-screen bg-surface pt-32 pb-24">
-    <!-- Header Especial da Página --->
-    <ServicesHeader 
-      :title="$t('services_page.title')" 
-      :desc="$t('services_page.desc')" 
-    />
-    
-    <!-- Renderizamos a seção original de Serviços --->
-    <ServicesSection />
-  </main>
-</template>
-
 <script setup lang="ts">
-import ServicesHeader from '~/components/services/ServicesHeader.vue';
-import ServicesSection from '~/components/index/ServicesSection.vue';
+import { useI18n } from '#imports'
+import PageHeader from '~/components/portal/PageHeader.vue'
+import ServicesSection from '~/components/index/ServicesSection.vue'
+import ProcessSection from '~/components/index/ProcessSection.vue'
+import ContactSection from '~/components/index/ContactSection.vue'
+
+const { t } = useI18n()
 
 useSeoMeta({
-  title: 'Serviços // Loboczss'
-});
+  title: () => `${t('services_page.title')} // Loboczss`,
+  description: () => t('services_page.desc'),
+})
 </script>
+
+<template>
+  <div>
+    <PageHeader
+      :title="$t('services_page.title')"
+      :lead="$t('services_page.desc')"
+    />
+    <ServicesSection />
+    <ProcessSection />
+    <ContactSection />
+  </div>
+</template>

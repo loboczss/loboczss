@@ -4,22 +4,153 @@
 
 @layer base {
   :root {
-    --surface-lowest: #f1f5f9;
-    --surface-low: #e2e8f0;
-    --surface: #cbd5e1;
-    --surface-container: #94a3b8;
-    --surface-high: #64748b;
-    --surface-highest: #475569;
-    --surface-content: #0f172a;
+    --void: #0b0620;
+    --abyss: #140c33;
+    --echo: #2a2152;
+    --glimmer: #5b4d9a;
+    --mist: #8e86b7;
+    --incandescent: #ff6a88;
+    --incandescent-deep: #d8456b;
+
+    /* Hairline frames. Two roles, because they answer to different rules:
+       --frame is decorative (section rules, dividers) and carries no contrast
+       requirement; --frame-control is the ONLY boundary a button or input has,
+       so it must clear 3:1 against the void ground. Measured 3.30:1. */
+    --frame: rgb(142 134 183 / 0.28);
+    --frame-strong: rgb(142 134 183 / 0.50);
+    --frame-control: rgb(142 134 183 / 0.68);
+
+    /* Text roles. Measured against --void:
+         mist          5.88:1  — body and every small tracked label
+         mist/85       4.52:1  — the recession floor; nothing quieter is text
+       GLIMMER (2.68:1) and ECHO (1.35:1) are NOT text colours. They are
+       reserved for rules, marks and non-informational strokes. */
+    --text: var(--mist);
+    --text-quiet: rgb(142 134 183 / 0.85);
+
+    /* Fine film grain, generated rather than shipped as a raster. */
+    --grain-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+
+    color-scheme: dark;
   }
 
-  .dark {
-    --surface-lowest: #060d20;
-    --surface-low: #131b2e;
-    --surface: #0b1326;
-    --surface-container: #171f33;
-    --surface-high: #222a3e;
-    --surface-highest: #2d3449;
-    --surface-content: #dbe2fd;
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--void);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    margin: 0;
+    /* Deliberately transparent: html carries the void fallback, and an opaque
+       body would paint over the shader canvas sitting behind the content. */
+    background-color: transparent;
+    color: var(--mist);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+
+  /* Browser surfaces belong to the design system too. */
+  ::selection {
+    background-color: rgb(255 106 136 / 0.28);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--incandescent);
+    outline-offset: 3px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--void);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--echo);
+    border: 3px solid var(--void);
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--glimmer);
+  }
+
+  * {
+    scrollbar-color: var(--echo) var(--void);
+    scrollbar-width: thin;
+  }
+
+  /* Tabular figures wherever numbers are read as quantities. */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  /* Fine film grain — the world's first named material. Sits above the
+     shader field and below all content. */
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.22;
+    mix-blend-mode: overlay;
+    background-image: var(--grain-url);
+    background-size: 180px 180px;
+  }
+
+  /* Liquid sheen — a slow diagonal pass of light across a frame. */
+  .sheen {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sheen::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      115deg,
+      transparent 38%,
+      rgb(142 134 183 / 0.14) 48%,
+      rgb(255 106 136 / 0.08) 52%,
+      transparent 62%
+    );
+    transform: translateX(-120%);
+    transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .sheen:hover::before,
+  .sheen:focus-within::before {
+    transform: translateX(120%);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sheen::before {
+      display: none;
+    }
+  }
+
+  /* The hairline frame that every component is built from. */
+  .frame {
+    border: 1px solid var(--frame);
+  }
+
+  .frame-hot {
+    border: 1px solid var(--incandescent);
   }
 }

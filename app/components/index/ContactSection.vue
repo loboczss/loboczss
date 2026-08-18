@@ -1,96 +1,98 @@
 <script setup lang="ts">
-import { ref } from '#imports';
-import PremiumButton from '~/components/ui/PremiumButton.vue';
-import BaseInput from '~/components/ui/BaseInput.vue';
+import { ref, useI18n } from '#imports'
+import PortalSection from '~/components/portal/PortalSection.vue'
+import PortalField from '~/components/portal/PortalField.vue'
+import PortalButton from '~/components/portal/PortalButton.vue'
+import ContactStrip from '~/components/portal/ContactStrip.vue'
 
-const contactName = ref('');
-const contactEmail = ref('');
-const contactMsg = ref('');
-const isSending = ref(false);
-const submitError = ref('');
-const submitSuccess = ref('');
+const { t } = useI18n()
 
-const submitContact = async () => {
-  submitError.value = '';
-  submitSuccess.value = '';
+const name = ref('')
+const email = ref('')
+const message = ref('')
+const sending = ref(false)
+const error = ref('')
+const success = ref('')
 
-  if (!contactName.value || !contactEmail.value || !contactMsg.value) {
-    submitError.value = 'Preencha nome, email e mensagem.';
-    return;
+const submit = async () => {
+  error.value = ''
+  success.value = ''
+
+  if (!name.value || !email.value || !message.value) {
+    error.value = t('contact.error_required')
+    return
   }
 
-  isSending.value = true;
-
+  sending.value = true
   try {
     await $fetch('/api/contact', {
       method: 'POST',
-      body: {
-        name: contactName.value,
-        email: contactEmail.value,
-        message: contactMsg.value,
-      },
-    });
-
-    submitSuccess.value = 'Mensagem enviada com sucesso.';
-    contactName.value = '';
-    contactEmail.value = '';
-    contactMsg.value = '';
-  } catch (error) {
-    submitError.value = 'Nao foi possivel enviar agora. Tente novamente em instantes.';
+      body: { name: name.value, email: email.value, message: message.value },
+    })
+    success.value = t('contact.success')
+    name.value = ''
+    email.value = ''
+    message.value = ''
+  } catch {
+    error.value = t('contact.error_failed')
   } finally {
-    isSending.value = false;
+    sending.value = false
   }
-};
+}
 </script>
 
 <template>
-  <section id="contact" class="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-surface-lowest relative z-10 border-t border-surface-container/50">
-    <div class="max-w-7xl mx-auto flex flex-col gap-16 md:gap-20">
-
-      <!-- CTA headline row -->
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
-        <h2 class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-semibold text-surface-content leading-[1] tracking-tighter max-w-3xl">
-          {{ $t('contact.title') }}
-        </h2>
-
-        <!-- Contact info sidebar -->
-        <div class="flex flex-col gap-4 shrink-0">
-          <div class="flex items-center gap-4">
-            <div class="w-0.5 h-10 bg-primary shrink-0"></div>
-            <div>
-              <p class="text-[10px] font-bold opacity-40 uppercase tracking-widest text-surface-content">{{ $t('contact.direct_line') }}</p>
-              <p class="text-base md:text-lg font-medium text-surface-content">+55 68 99255-2607</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-4">
-            <div class="w-0.5 h-10 bg-secondary shrink-0"></div>
-            <div>
-              <p class="text-[10px] font-bold opacity-40 uppercase tracking-widest text-surface-content">{{ $t('contact.email') }}</p>
-              <p class="text-base md:text-lg font-medium text-surface-content">juan@loboczss.cloud</p>
-            </div>
-          </div>
+  <PortalSection
+    id="contact"
+    :label="$t('contact.label')"
+    :heading="$t('contact.title')"
+    :lead="$t('contact.lead')"
+  >
+    <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+      <form class="flex flex-col gap-8 lg:col-span-7" novalidate @submit.prevent="submit">
+        <div class="grid gap-8 sm:grid-cols-2">
+          <PortalField
+            id="c-name"
+            v-model="name"
+            :label="$t('contact.name_label')"
+            :placeholder="$t('contact.name_ph')"
+            required
+          />
+          <PortalField
+            id="c-email"
+            v-model="email"
+            type="email"
+            :label="$t('contact.email_label')"
+            :placeholder="$t('contact.email_ph')"
+            required
+          />
         </div>
-      </div>
 
-      <!-- Form card -->
-      <div class="bg-surface border border-surface-container/40 p-8 md:p-12 lg:p-14">
-        <form class="flex flex-col gap-7" @submit.prevent="submitContact">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            <BaseInput v-model="contactName" id="con-name" :label="$t('contact.name_label')" :placeholder="$t('contact.name_ph')" required />
-            <BaseInput v-model="contactEmail" id="con-email" type="email" :label="$t('contact.email_label')" :placeholder="$t('contact.email_ph')" required />
-          </div>
-          <BaseInput v-model="contactMsg" id="con-msg" :label="$t('contact.form_span')" :placeholder="$t('contact.msg_placeholder')" required />
-          <div class="flex justify-end mt-2">
-            <PremiumButton variant="primary" :loading="isSending" class="text-sm tracking-widest uppercase font-bold justify-center px-14">
-              {{ $t('contact.submit') }}
-            </PremiumButton>
-          </div>
+        <PortalField
+          id="c-msg"
+          v-model="message"
+          multiline
+          :rows="7"
+          :label="$t('contact.msg_label')"
+          :placeholder="$t('contact.msg_placeholder')"
+          required
+        />
 
-          <p v-if="submitError" class="text-sm text-red-500/90 font-medium">{{ submitError }}</p>
-          <p v-if="submitSuccess" class="text-sm text-emerald-500/90 font-medium">{{ submitSuccess }}</p>
-        </form>
-      </div>
+        <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <p v-if="error" role="alert" class="text-meta uppercase text-incandescent">{{ error }}</p>
+          <p v-else-if="success" role="status" class="text-meta uppercase text-mist">{{ success }}</p>
+          <span v-else class="text-micro uppercase text-mist/85">{{ $t('contact.reply_note') }}</span>
 
+          <PortalButton type="submit" variant="primary" :loading="sending" class="sm:min-w-[17rem]">
+            {{ sending ? $t('contact.sending') : $t('contact.submit') }}
+          </PortalButton>
+        </div>
+      </form>
+
+      <aside class="flex flex-col gap-8 lg:col-span-5">
+        <p class="text-sm leading-relaxed text-mist">{{ $t('contact.aside') }}</p>
+        <ContactStrip />
+      </aside>
     </div>
-  </section>
+  </PortalSection>
 </template>

@@ -1,65 +1,50 @@
 import type { Config } from 'tailwindcss'
 
 export default <Partial<Config>>{
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#f5f3ff',
-          100: '#ede9fe',
-          200: '#ddd6fe',
-          300: '#c4b5fd',
-          400: '#a78bfa',
-          500: '#8b5cf6',
-          600: '#7c3aed',
-          700: '#6d28d9',
-          800: '#5b21b6',
-          900: '#4c1d95',
-          950: '#2e1065',
-          DEFAULT: '#8b5cf6', // Indigo-600 like primary
+        // The portal palette. Named on the world's own board — never renamed
+        // to generic scale steps.
+        void: '#0B0620',
+        abyss: '#140C33',
+        echo: '#2A2152',
+        glimmer: '#5B4D9A',
+        mist: '#8E86B7',
+        incandescent: {
+          DEFAULT: '#FF6A88',
+          deep: '#D8456B',
         },
-        secondary: {
-          50: '#ecfdf5',
-          100: '#d1fae5',
-          200: '#a7f3d0',
-          300: '#6ee7b7',
-          400: '#34d399',
-          500: '#10b981',
-          600: '#059669',
-          700: '#047857',
-          800: '#065f46',
-          900: '#064e3b',
-          950: '#022c22',
-          DEFAULT: '#10b981', // Emerald-500 like secondary
-        },
-        surface: {
-          lowest: 'var(--surface-lowest)',
-          low: 'var(--surface-low)',
-          DEFAULT: 'var(--surface)',
-          container: 'var(--surface-container)',
-          high: 'var(--surface-high)',
-          highest: 'var(--surface-highest)',
-          variant: 'var(--surface-highest)', // Reuse highest
-          content: 'var(--surface-content)',
-        }
       },
       fontFamily: {
-        sans: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
+        // One variable grotesk, worked across its width axis.
+        sans: ['Archivo', 'system-ui', 'sans-serif'],
       },
-      animation: {
-        'fade-in': 'fade-in 0.8s ease-out forwards',
-        'text-gradient': 'text-gradient 4s linear infinite',
+      letterSpacing: {
+        // The board's four tracking steps, all uppercase.
+        label: '0.3em',
+        wide: '0.2em',
+        display: '-0.02em',
       },
-      keyframes: {
-        'fade-in': {
-          'from': { opacity: '0', transform: 'translateY(10px)' },
-          'to': { opacity: '1', transform: 'translateY(0)' },
-        },
-        'text-gradient': {
-          'to': { backgroundPosition: '200% center' },
-        }
-      }
+      fontSize: {
+        // Label steps — all uppercase, all at 0.3em.
+        micro: ['0.5625rem', { lineHeight: '1.2', letterSpacing: '0.3em' }],
+        caps: ['0.625rem', { lineHeight: '1.2', letterSpacing: '0.3em' }],
+        meta: ['0.6875rem', { lineHeight: '1.3', letterSpacing: '0.3em' }],
+        label: ['0.75rem', { lineHeight: '1.3', letterSpacing: '0.3em' }],
+        // Display steps. Declared here so the ramp is a system rather than
+        // five improvised clamps in five scoped stylesheets.
+        title: ['clamp(1.5rem, 3vw, 2.25rem)', { lineHeight: '1.1', letterSpacing: '-0.01em' }],
+        headline: ['clamp(2rem, 5vw, 3.75rem)', { lineHeight: '1.02', letterSpacing: '-0.02em' }],
+        page: ['clamp(2.5rem, 7vw, 5.5rem)', { lineHeight: '0.98', letterSpacing: '-0.025em' }],
+        hero: ['clamp(3.25rem, 13vw, 11.5rem)', { lineHeight: '0.92', letterSpacing: '-0.03em' }],
+      },
+      maxWidth: {
+        portal: '84rem',
+      },
+      transitionTimingFunction: {
+        portal: 'cubic-bezier(0.16, 1, 0.3, 1)',
+      },
     }
   },
   plugins: [],

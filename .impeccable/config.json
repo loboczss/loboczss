@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "arial",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-18T21:09:25.086Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem fonte web-safe, nao e escolha de sistema de design. Mesmo padrao ja presente em contact.post.ts"
+      }
+    ]
+  }
+}

@@ -1,21 +1,22 @@
-<template>
-  <main class="min-h-screen bg-surface pt-32 pb-24">
-    <!-- Header Especial da Página --->
-    <ContactHeader 
-      :title="$t('contact_page.title')" 
-      :desc="$t('contact_page.desc')" 
-    />
-    
-    <!-- Renderizamos a seção original de Contato --->
-    <ContactSection />
-  </main>
-</template>
-
 <script setup lang="ts">
-import ContactHeader from '~/components/contact/ContactHeader.vue';
-import ContactSection from '~/components/index/ContactSection.vue';
+import { useI18n } from '#imports'
+import PageHeader from '~/components/portal/PageHeader.vue'
+import ContactSection from '~/components/index/ContactSection.vue'
+
+const { t } = useI18n()
 
 useSeoMeta({
-  title: 'Contato // Loboczss'
-});
+  title: () => `${t('contact_page.title')} // Loboczss`,
+  description: () => t('contact_page.desc'),
+})
 </script>
+
+<template>
+  <div>
+    <PageHeader
+      :title="$t('contact_page.title')"
+      :lead="$t('contact_page.desc')"
+    />
+    <ContactSection />
+  </div>
+</template>

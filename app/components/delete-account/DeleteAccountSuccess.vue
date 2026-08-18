@@ -1,16 +1,25 @@
+<script setup lang="ts">
+import PortalButton from '~/components/portal/PortalButton.vue'
+</script>
+
 <template>
-  <div class="flex flex-col items-center text-center gap-6 py-12 animate-in fade-in zoom-in duration-700">
-    <div class="w-24 h-24 rounded-full bg-primary/5 flex items-center justify-center text-primary mb-4 border border-primary/10">
-      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-    </div>
-    <h2 class="text-3xl font-bold tracking-tight text-surface-content uppercase">
-       {{ $t('delete_account.success_title') }}
+  <div class="flex flex-col items-start gap-8 border border-[var(--frame)] p-10 md:p-14">
+    <span class="flex h-14 w-14 items-center justify-center rounded-full border border-incandescent text-incandescent">
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20 6L9 17l-5-5" />
+      </svg>
+    </span>
+
+    <h2 class="text-2xl font-light uppercase tracking-wide text-white md:text-3xl">
+      {{ $t('delete_account.success_title') }}
     </h2>
-    <p class="text-surface-content/40 leading-relaxed max-w-sm italic">
-       {{ $t('delete_account.success_msg') }}
+
+    <p class="max-w-[62ch] text-[0.9375rem] leading-relaxed text-mist">
+      {{ $t('delete_account.success_msg') }}
     </p>
-    <NuxtLink to="/" class="mt-10 px-8 py-3 bg-surface-container border border-surface-container/50 rounded-full text-primary font-bold uppercase tracking-widest text-[10px] hover:bg-primary hover:text-white transition-all duration-500">
-       {{ $t('privacy.back_home') }}
-    </NuxtLink>
+
+    <PortalButton to="/" variant="secondary" class="sm:min-w-[17rem]">
+      {{ $t('privacy.back_home') }}
+    </PortalButton>
   </div>
 </template>

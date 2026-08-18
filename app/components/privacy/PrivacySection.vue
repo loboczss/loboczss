@@ -1,16 +1,25 @@
 <script setup lang="ts">
+/**
+ * Legal reading, inside the world but built for comprehension: the ground
+ * goes solid so the shader never competes with body text, and measure is
+ * capped near 70ch.
+ */
 defineProps<{
-  title: string;
-  content: string;
-}>();
+  index: string
+  title: string
+  content: string
+}>()
 </script>
 
 <template>
-  <section class="flex flex-col gap-4">
-    <h2 class="text-xl font-bold uppercase tracking-widest text-surface-content border-l-2 border-primary pl-4">
-      {{ title }}
-    </h2>
-    <p class="text-surface-content/80 leading-relaxed">{{ content }}</p>
+  <section class="flex flex-col gap-4 border-t border-[var(--frame)] py-9">
+    <div class="flex items-baseline gap-4">
+      <span class="text-micro uppercase text-incandescent tnum">{{ index }}</span>
+      <h2 class="text-sm uppercase tracking-wide text-mist">{{ title }}</h2>
+    </div>
+
+    <p class="max-w-[68ch] text-[0.9375rem] leading-[1.75] text-mist">{{ content }}</p>
+
     <slot name="footer" />
   </section>
 </template>

@@ -1,77 +1,54 @@
-<template>
-  <main class="min-h-screen bg-surface pt-32 pb-24 px-6 md:px-12 lg:px-24">
-    <div class="max-w-3xl mx-auto flex flex-col gap-12">
-      <!-- Header Component -->
-      <PrivacyHeader 
-        :title="$t('privacy.title')" 
-        :update="$t('privacy.last_update')" 
-      />
+<script setup lang="ts">
+import { useI18n } from '#imports'
+import PageHeader from '~/components/portal/PageHeader.vue'
+import PrivacySection from '~/components/privacy/PrivacySection.vue'
+import PortalButton from '~/components/portal/PortalButton.vue'
 
-      <!-- Content -->
-      <article class="flex flex-col gap-10 overflow-hidden">
-        <p class="text-lg italic font-medium text-surface-content/80 leading-relaxed">
+const { t } = useI18n()
+
+const sections = [1, 2, 3, 4, 5, 6, 7].map((n) => ({
+  index: String(n).padStart(2, '0'),
+  title: `privacy.sec${n}_title`,
+  content: `privacy.sec${n}_content`,
+}))
+
+useSeoMeta({
+  title: () => `${t('footer.privacy')} // Loboczss`,
+  description: () => t('privacy.seo_desc'),
+})
+</script>
+
+<template>
+  <div class="bg-void/90 backdrop-blur-sm">
+    <PageHeader
+      :title="$t('privacy.title')"
+      :meta="$t('privacy.last_update')"
+    />
+
+    <div class="mx-auto w-full max-w-portal px-6 pb-28 md:px-10">
+      <div class="max-w-3xl">
+        <p class="max-w-[68ch] pb-4 text-lg font-light leading-relaxed text-mist">
           {{ $t('privacy.intro') }}
         </p>
 
-        <PrivacySection 
-          :title="$t('privacy.sec1_title')" 
-          :content="$t('privacy.sec1_content')" 
-        />
-
-        <PrivacySection 
-          :title="$t('privacy.sec2_title')" 
-          :content="$t('privacy.sec2_content')" 
-        />
-
-        <PrivacySection 
-          :title="$t('privacy.sec3_title')" 
-          :content="$t('privacy.sec3_content')" 
-        />
-
-        <PrivacySection 
-          :title="$t('privacy.sec4_title')" 
-          :content="$t('privacy.sec4_content')" 
-        />
-
-        <PrivacySection 
-          :title="$t('privacy.sec5_title')" 
-          :content="$t('privacy.sec5_content')" 
-        />
-
-        <PrivacySection 
-          :title="$t('privacy.sec6_title')" 
-          :content="$t('privacy.sec6_content')" 
-        />
-
-        <PrivacySection 
-          :title="$t('privacy.sec7_title')" 
-          :content="$t('privacy.sec7_content')" 
+        <PrivacySection
+          v-for="s in sections"
+          :key="s.index"
+          :index="s.index"
+          :title="$t(s.title)"
+          :content="$t(s.content)"
         >
-          <template #footer>
-            <NuxtLink to="/delete-account" class="inline-flex items-center gap-2 mt-4 text-primary font-bold uppercase tracking-widest text-xs border-b border-primary/20 pb-1 hover:border-primary transition-all">
+          <template v-if="s.index === '07'" #footer>
+            <PortalButton to="/delete-account" variant="secondary" class="mt-4 w-full sm:w-auto sm:min-w-[19rem]">
               {{ $t('privacy.delete_link') }}
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-            </NuxtLink>
+            </PortalButton>
           </template>
         </PrivacySection>
 
-        <!-- Footer Info -->
-        <div class="mt-12 p-8 bg-surface-container/30 border border-surface-container/50 rounded-2xl">
-          <p class="text-sm font-medium text-surface-content/80 leading-relaxed">
-            {{ $t('privacy.contact_info') }}
-          </p>
+        <div class="mt-12 border border-[var(--frame)] p-8">
+          <p class="text-[0.9375rem] leading-relaxed text-mist/80">{{ $t('privacy.contact_info') }}</p>
         </div>
-      </article>
+      </div>
     </div>
-  </main>
+  </div>
 </template>
-
-<script setup lang="ts">
-import PrivacyHeader from '~/components/privacy/PrivacyHeader.vue';
-import PrivacySection from '~/components/privacy/PrivacySection.vue';
-
-useSeoMeta({
-  title: 'Privacidade // Loboczss',
-  description: 'Nossa política de privacidade e compromisso com a proteção de dados.'
-})
-</script>

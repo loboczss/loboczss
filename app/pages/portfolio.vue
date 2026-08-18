@@ -1,21 +1,24 @@
-<template>
-  <main class="min-h-screen bg-surface pt-32 pb-24">
-    <!-- Header Especial da Página --->
-    <PortfolioHeader 
-      :title="$t('portfolio_page.title')" 
-      :desc="$t('portfolio_page.desc')" 
-    />
-    
-    <!-- Renderizamos a seção original do Portfólio --->
-    <PortfolioSection />
-  </main>
-</template>
-
 <script setup lang="ts">
-import PortfolioHeader from '~/components/portfolio/PortfolioHeader.vue';
-import PortfolioSection from '~/components/index/PortfolioSection.vue';
+import { useI18n } from '#imports'
+import PageHeader from '~/components/portal/PageHeader.vue'
+import PortfolioSection from '~/components/index/PortfolioSection.vue'
+import ContactSection from '~/components/index/ContactSection.vue'
+
+const { t } = useI18n()
 
 useSeoMeta({
-  title: 'Projetos // Loboczss'
-});
+  title: () => `${t('portfolio_page.title')} // Loboczss`,
+  description: () => t('portfolio_page.desc'),
+})
 </script>
+
+<template>
+  <div>
+    <PageHeader
+      :title="$t('portfolio_page.title')"
+      :lead="$t('portfolio_page.desc')"
+    />
+    <PortfolioSection />
+    <ContactSection />
+  </div>
+</template>

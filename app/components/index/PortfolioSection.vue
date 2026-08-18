@@ -1,71 +1,103 @@
 <script setup lang="ts">
-import BaseButton from '~/components/ui/BaseButton.vue';
-import { indexImages } from '~/config/images';
+import PortalSection from '~/components/portal/PortalSection.vue'
+import PortalCard from '~/components/portal/PortalCard.vue'
+import PortalButton from '~/components/portal/PortalButton.vue'
+
+/**
+ * The proof inventory. Three real, checkable artifacts at equal frame weight —
+ * no invented case studies, no stock photography standing in for screenshots.
+ */
+const proofs = [
+  {
+    index: '01',
+    label: 'portfolio.item1_kind',
+    name: 'portfolio.item1_name',
+    body: 'portfolio.item1_desc',
+    action: 'portfolio.item1_action',
+    href: 'https://github.com/loboczss',
+    seed: 'github',
+    hot: true,
+  },
+  {
+    index: '02',
+    label: 'portfolio.item2_kind',
+    name: 'portfolio.item2_name',
+    body: 'portfolio.item2_desc',
+    seed: 'server',
+    hot: false,
+  },
+  {
+    index: '03',
+    label: 'portfolio.item3_kind',
+    name: 'portfolio.item3_name',
+    body: 'portfolio.item3_desc',
+    seed: 'thissite',
+    hot: false,
+  },
+]
 </script>
 
 <template>
-  <section id="portfolio" class="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-surface relative z-10 border-t border-surface-container/50">
-    <div class="max-w-7xl mx-auto flex flex-col gap-16 md:gap-20">
+  <PortalSection
+    id="portfolio"
+    :label="$t('portfolio.label')"
+    :heading="$t('portfolio.title')"
+    :lead="$t('portfolio.intro')"
+  >
+    <ul class="grid gap-px bg-[var(--frame)] md:grid-cols-3">
+      <li v-for="p in proofs" :key="p.index" class="reveal" :style="{ '--d': `${proofs.indexOf(p) * 110}ms` }">
+        <PortalCard
+          class="h-full"
+          :label="$t(p.label)"
+          :name="$t(p.name)"
+          :body="$t(p.body)"
+          :action="p.action ? $t(p.action) : ''"
+          :href="p.href"
+          :seed="p.seed"
+          :hot="p.hot"
+        />
+      </li>
+    </ul>
 
-      <!-- Header -->
-      <div class="flex items-end justify-between">
-        <h2 class="text-4xl md:text-5xl lg:text-7xl font-semibold text-surface-content tracking-tighter leading-[1]">
-          {{ $t('portfolio.title1') }}<br/>
-          <span class="text-surface-content/30">{{ $t('portfolio.title2') }}</span>
-        </h2>
-        <BaseButton variant="ghost" class="hidden md:flex text-[10px] uppercase tracking-widest text-surface-content/40 hover:text-surface-content transition-colors">
-          {{ $t('portfolio.view_full') }}
-        </BaseButton>
-      </div>
-
-      <!-- Featured project — full width -->
-      <div class="group cursor-pointer flex flex-col gap-5">
-        <div class="relative w-full aspect-[16/7] bg-surface-container overflow-hidden border border-surface-container/50">
-          <img
-            :src="indexImages.portfolioProject1"
-            class="absolute inset-0 w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-700"
-            alt="Neural Defense"
-          />
-          <div class="absolute inset-0 flex items-end p-8 md:p-12 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            <span class="text-white text-lg font-semibold tracking-tight">Neural Defense →</span>
-          </div>
-          <!-- Index tag -->
-          <span class="absolute top-4 left-4 text-[10px] font-bold uppercase tracking-widest text-white/50 bg-black/30 px-2 py-1">01</span>
-        </div>
-        <div class="flex items-start justify-between gap-4">
-          <div class="flex flex-col gap-1">
-            <span class="text-[10px] font-bold text-surface-content/40 uppercase tracking-widest">AI & Fintech</span>
-            <h4 class="text-2xl md:text-3xl font-semibold text-surface-content tracking-tighter">Neural Defense</h4>
-          </div>
-          <p class="hidden md:block text-sm text-surface-content/50 max-w-xs leading-relaxed text-right">{{ $t('portfolio.project1') }}</p>
-        </div>
-      </div>
-
-      <!-- Secondary project + CTA -->
-      <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-start border-t border-surface-container/40 pt-14 md:pt-16">
-        <div class="group cursor-pointer flex flex-col gap-5 md:w-1/2">
-          <div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden border border-surface-container/50">
-            <img
-              :src="indexImages.portfolioProject2"
-              class="absolute inset-0 w-full h-full object-cover grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-700"
-              alt="Vault Flow"
-            />
-            <span class="absolute top-4 left-4 text-[10px] font-bold uppercase tracking-widest text-white/50 bg-black/30 px-2 py-1">02</span>
-          </div>
-          <div class="flex flex-col gap-1">
-            <span class="text-[10px] font-bold text-surface-content/40 uppercase tracking-widest">Finance</span>
-            <h4 class="text-2xl md:text-3xl font-semibold text-surface-content tracking-tighter">Vault Flow</h4>
-          </div>
-        </div>
-
-        <div class="md:w-1/2 flex flex-col justify-between gap-8 md:py-2 self-stretch">
-          <p class="text-base md:text-lg text-surface-content/50 leading-relaxed">{{ $t('portfolio.project2') }}</p>
-          <BaseButton variant="ghost" class="flex md:hidden text-[10px] uppercase tracking-widest text-surface-content/40 hover:text-surface-content transition-colors w-fit">
-            {{ $t('portfolio.view_full') }}
-          </BaseButton>
-        </div>
-      </div>
-
+    <div class="flex flex-col gap-8 border-t border-[var(--frame)] pt-12 sm:flex-row sm:items-center sm:justify-between">
+      <p class="max-w-lg text-lg font-light text-mist">{{ $t('portfolio.cta_title') }}</p>
+      <PortalButton to="/budget" variant="secondary" class="sm:min-w-[17rem]">
+        {{ $t('portfolio.cta_action') }}
+      </PortalButton>
     </div>
-  </section>
+  </PortalSection>
 </template>
+
+<style scoped>
+/* The inventory is the one place a stagger carries meaning: the order is the
+   order of what can be checked first. */
+.reveal {
+  animation: rise 720ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--d, 0ms);
+  animation-timeline: view();
+  animation-range: entry 0% entry 55%;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@supports not (animation-timeline: view()) {
+  .reveal {
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: none;
+  }
+}
+</style>
