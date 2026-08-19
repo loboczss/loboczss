@@ -37,6 +37,11 @@
   html {
     scroll-behavior: smooth;
     background-color: var(--void);
+    /* Horizontal clamp belongs on the ROOT, where overflow propagates to the
+       viewport. On <body> it instead makes the body its own scroll container,
+       which pins window.scrollY at 0 forever — silently killing every
+       scroll listener on the page, the header's material change among them. */
+    overflow-x: hidden;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -54,7 +59,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
-    overflow-x: hidden;
   }
 
   /* Browser surfaces belong to the design system too. */
