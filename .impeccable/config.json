@@ -11,6 +11,285 @@
         ],
         "createdAt": "2026-08-18T21:09:25.086Z",
         "reason": "Template de e-mail HTML: clientes de e-mail exigem fonte web-safe, nao e escolha de sistema de design. Mesmo padrao ja presente em contact.post.ts"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "arial",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:19.997Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-font",
+        "value": "arial",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.070Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#e9efff",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.146Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#e9efff",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.217Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#111a30",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.291Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#111a30",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.356Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#1a2542",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.431Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#1a2542",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.504Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "16px",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.586Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "16px",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.660Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#9eb2df",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.740Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#9eb2df",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.809Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "28px",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.881Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "28px",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:20.960Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#cdd9ff",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.037Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#cdd9ff",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.118Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "14px",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.198Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "14px",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.271Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "12px",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.348Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "12px",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.417Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#f1f5ff",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.494Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#f1f5ff",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.571Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#090f1d",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.636Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#090f1d",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.704Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#111a31",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.771Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#111a31",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.846Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#1a2544",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.913Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#1a2544",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:21.980Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#d6e0ff",
+        "files": [
+          "server/api/delete-account.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:33.840Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#d6e0ff",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:33.929Z",
+        "reason": "Template de e-mail HTML: clientes de e-mail exigem estilo inline, fonte web-safe e hex literal; nao leem var() nem web font. O documentador excluiu formalmente estes arquivos do sistema de design web."
+      },
+      {
+        "rule": "overused-font",
+        "value": "arial",
+        "files": [
+          "server/api/contact.post.ts"
+        ],
+        "createdAt": "2026-08-19T04:06:47.224Z",
+        "reason": "Template de e-mail HTML: fonte web-safe e obrigatoria; nenhuma face de marca sobrevive aos clientes de e-mail."
       }
     ]
   }
