@@ -11,6 +11,7 @@ const scrolled = ref(false)
 const menuLabel = computed(() => (open.value ? t('header.menu_close') : t('header.menu_open')))
 
 const links = [
+  { to: '/about', key: 'header.about' },
   { to: '/services', key: 'header.services' },
   { to: '/portfolio', key: 'header.projects' },
   { to: '/contact', key: 'header.contact' },

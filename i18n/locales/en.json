@@ -8,7 +8,8 @@
     "logo_home": "Loboczss — go to the home page",
     "menu_open": "Open menu",
     "menu_close": "Close menu",
-    "language_select": "Choose language"
+    "language_select": "Choose language",
+    "about": "About"
   },
   "portal": {
     "initializing": "Initializing"
@@ -69,9 +70,13 @@
     "submit": "Send message",
     "sending": "Sending",
     "reply_note": "I reply to your email",
-    "error_required": "Fill in name, email and message to send.",
     "error_failed": "I couldn't send that right now. Try again in a moment, or reach me on WhatsApp.",
-    "success": "Message sent. I'll reply to the email you gave."
+    "err_name": "I need a name to reply to.",
+    "err_email": "That email looks incomplete — check it before sending.",
+    "err_msg": "Tell me what you need, even in one line.",
+    "success_title": "Received",
+    "success_body": "Your message arrived. I'll reply to the email you gave. If it's urgent, WhatsApp is faster than I am.",
+    "success_again": "Send another"
   },
   "footer": {
     "desc": "Apps, websites and AI automation — built and maintained by one person.",
@@ -152,5 +157,39 @@
     "code_label": "Fragment shader source",
     "uniforms_label": "Live uniform values",
     "gpu": "GPU"
+  },
+  "about": {
+    "label": "The station",
+    "title": "What I keep running",
+    "lead": "Under two years writing code, and all of this is up right now. I'd rather show you what I operate than tell you how long I've been at it.",
+    "map_hint": "Tap a node to see what it is",
+    "means": "What this means for you",
+    "bio_title": "Who's on the other side",
+    "bio": "I'm Juan Reis. I completed a technical degree in Information Technology at IFRO and I'm studying Systems Analysis and Development at Anhanguera. I've been developing for under two years — which is exactly why I'd rather prove than promise. Every node on this map is something you can open, test, or ask me to demonstrate.",
+    "state_active": "live",
+    "state_done": "completed",
+    "state_running": "in progress",
+    "state_public": "public",
+    "n_formacao_name": "Education",
+    "n_formacao_what": "Technical degree in IT at IFRO, completed. Systems Analysis and Development at Anhanguera, in progress.",
+    "n_formacao_means": "Formal grounding, not just tutorials. The vocabulary to understand your problem before writing the first line.",
+    "n_juan_name": "Juan Reis",
+    "n_juan_what": "One person. No outsourced team, no handing your project along.",
+    "n_juan_means": "You talk to whoever writes the code. What you ask for doesn't pass through three people before becoming something else.",
+    "n_servidor_name": "Self-hosted server",
+    "n_servidor_what": "A Linux machine I administer, exposed through a Cloudflare tunnel, with a backup routine.",
+    "n_servidor_means": "If your project needs a back end, it won't live somewhere I can't fix when it breaks.",
+    "n_site_name": "This site",
+    "n_site_what": "Nuxt 4, bilingual, a WebGL field, a deploy I maintain myself.",
+    "n_site_means": "You're already inside an example of what I ship. No screenshots to take on faith.",
+    "n_automacoes_name": "Automation",
+    "n_automacoes_what": "n8n flows running unattended on the server, wiring tools to each other.",
+    "n_automacoes_means": "Repetitive work that eats your team's day can become a flow that runs with nobody watching.",
+    "n_apps_name": "Mobile apps",
+    "n_apps_what": "React Native and Flutter. One app published to a store.",
+    "n_apps_means": "I've been through store submission and its requirements — including the legal pages that live on this very site.",
+    "n_github_name": "Open source",
+    "n_github_what": "Public repositories at github.com/loboczss.",
+    "n_github_means": "You can read how I write and how I structure a project before hiring me."
   }
 }

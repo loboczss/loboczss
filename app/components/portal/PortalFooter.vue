@@ -19,6 +19,7 @@ const currentYear = new Date().getFullYear()
         <div class="grid grid-cols-2 gap-x-12 gap-y-8">
           <nav class="flex flex-col gap-4" :aria-label="$t('footer.navigate')">
             <span class="text-micro uppercase text-mist/85">{{ $t('footer.navigate') }}</span>
+            <NuxtLink to="/about" class="flink text-caps uppercase">{{ $t('header.about') }}</NuxtLink>
             <NuxtLink to="/services" class="flink text-caps uppercase">{{ $t('header.services') }}</NuxtLink>
             <NuxtLink to="/portfolio" class="flink text-caps uppercase">{{ $t('header.projects') }}</NuxtLink>
             <NuxtLink to="/budget" class="flink text-caps uppercase">{{ $t('header.quote') }}</NuxtLink>

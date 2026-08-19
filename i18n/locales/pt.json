@@ -8,7 +8,8 @@
     "logo_home": "Loboczss — ir para a página inicial",
     "menu_open": "Abrir menu",
     "menu_close": "Fechar menu",
-    "language_select": "Escolher idioma"
+    "language_select": "Escolher idioma",
+    "about": "Sobre"
   },
   "portal": {
     "initializing": "Iniciando"
@@ -69,9 +70,13 @@
     "submit": "Enviar mensagem",
     "sending": "Enviando",
     "reply_note": "Respondo no seu e-mail",
-    "error_required": "Preencha nome, e-mail e mensagem para enviar.",
     "error_failed": "Não consegui enviar agora. Tente de novo em instantes ou me chame no WhatsApp.",
-    "success": "Mensagem enviada. Respondo no e-mail que você informou."
+    "err_name": "Preciso de um nome para te responder.",
+    "err_email": "Esse e-mail parece incompleto — confira antes de enviar.",
+    "err_msg": "Escreva o que você precisa, nem que seja em uma linha.",
+    "success_title": "Recebido",
+    "success_body": "Sua mensagem chegou. Respondo no e-mail que você informou. Se for urgente, o WhatsApp é mais rápido que eu.",
+    "success_again": "Enviar outra"
   },
   "footer": {
     "desc": "Aplicativos, sites e automações com I.A. — feitos e mantidos por uma pessoa só.",
@@ -152,5 +157,39 @@
     "code_label": "Código-fonte do shader de fragmento",
     "uniforms_label": "Valores ao vivo dos uniforms",
     "gpu": "GPU"
+  },
+  "about": {
+    "label": "A estação",
+    "title": "O que eu mantenho no ar",
+    "lead": "Menos de dois anos escrevendo código, e tudo isto está de pé agora. Prefiro te mostrar o que eu opero a te contar quanto tempo eu tenho de estrada.",
+    "map_hint": "Toque num nó para ver o que ele é",
+    "means": "O que isso significa para você",
+    "bio_title": "Quem está do outro lado",
+    "bio": "Sou Juan Reis. Fiz Técnico em Informática no IFRO e curso Análise e Desenvolvimento de Sistemas na Anhanguera. Trabalho com desenvolvimento há menos de dois anos — e é exatamente por isso que eu prefiro provar em vez de prometer. Cada nó deste mapa é uma coisa que você pode abrir, testar, ou me pedir para mostrar funcionando.",
+    "state_active": "no ar",
+    "state_done": "concluído",
+    "state_running": "em curso",
+    "state_public": "público",
+    "n_formacao_name": "Formação",
+    "n_formacao_what": "Técnico em Informática pelo IFRO, concluído. Análise e Desenvolvimento de Sistemas na Anhanguera, em curso.",
+    "n_formacao_means": "Base formal, não só tutorial. O vocabulário para entender o seu problema antes de escrever a primeira linha.",
+    "n_juan_name": "Juan Reis",
+    "n_juan_what": "Uma pessoa. Sem equipe terceirizada, sem repasse de projeto.",
+    "n_juan_means": "Você fala com quem escreve o código. O que você pedir não passa por três pessoas até virar outra coisa.",
+    "n_servidor_name": "Servidor próprio",
+    "n_servidor_what": "Máquina Linux que eu administro, exposta por túnel Cloudflare, com rotina de backup.",
+    "n_servidor_means": "Se o seu projeto precisar de back-end, ele não vai morar num lugar que eu não sei consertar quando quebrar.",
+    "n_site_name": "Este site",
+    "n_site_what": "Nuxt 4, bilíngue, campo WebGL, deploy que eu mesmo mantenho.",
+    "n_site_means": "Você já está dentro de um exemplo do que eu entrego. Não precisa acreditar em screenshot.",
+    "n_automacoes_name": "Automações",
+    "n_automacoes_what": "Fluxos em n8n rodando sozinhos no servidor, integrando ferramentas entre si.",
+    "n_automacoes_means": "Trabalho repetitivo que hoje consome sua equipe pode virar um fluxo que roda sem ninguém olhando.",
+    "n_apps_name": "Aplicativos",
+    "n_apps_what": "React Native e Flutter. Um app publicado em loja.",
+    "n_apps_means": "Eu já passei pelo processo de publicação e pelas exigências de loja — inclusive as páginas legais que estão aqui neste site.",
+    "n_github_name": "Código aberto",
+    "n_github_what": "Repositórios públicos em github.com/loboczss.",
+    "n_github_means": "Dá para ler como eu escrevo e como eu organizo um projeto antes de me contratar."
   }
 }

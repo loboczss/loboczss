@@ -30,7 +30,7 @@ const props = withDefaults(
   }
 )
 
-const emit = defineEmits<{ 'update:modelValue': [value: string] }>()
+const emit = defineEmits<{ 'update:modelValue': [value: string]; blur: [] }>()
 
 const describedBy = computed(() => {
   const ids: string[] = []
@@ -61,6 +61,7 @@ const onInput = (e: Event) => emit('update:modelValue', (e.target as HTMLInputEl
       class="pfield"
       :class="props.error && 'pfield--error'"
       @input="onInput"
+      @blur="emit('blur')"
     ></textarea>
 
     <input
@@ -75,6 +76,7 @@ const onInput = (e: Event) => emit('update:modelValue', (e.target as HTMLInputEl
       class="pfield"
       :class="props.error && 'pfield--error'"
       @input="onInput"
+      @blur="emit('blur')"
     />
 
     <p v-if="props.help" :id="`${props.id}-help`" class="text-meta uppercase text-mist">
